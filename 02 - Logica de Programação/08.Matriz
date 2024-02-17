@@ -1,0 +1,141 @@
+Matriz
+Bem-vindo ao estudo sobre as Matrizes! Essa aula ajudará na compreensão de alguns conceitos que são importantes no contexto de programação. Vamos conhecer melhor esses conceitos?
+
+ 
+
+Uma matriz é uma variável composta, homogênea e multidimensional, formada por uma sequência de variáveis do mesmo tipo, com o mesmo identificador (mesmo nome) e alocadas sequencialmente na memória (RIBEIRO, 2019).
+
+Pode-se dizer que matriz é um vetor de vetores. A diferença é que um vetor tem apenas uma dimensão, enquanto a matriz possui mais de uma dimensão. Ambos são acessados por índice.
+
+As matrizes são comumente referenciadas através de suas dimensões, ou seja, são referenciadas pelas quantidades de linhas e colunas, como mostra a Figura 1 (MANZANO; OLIVEIRA, 2012).
+
+ 
+
+Sua notação comum é MxN, onde:
+
+M é a dimensão horizontal (quantidade de linhas).
+
+N é dimensão vertical (quantidade de colunas).
+
+
+Imagine o seguinte problema: Você precisa criar um algoritmo que lê e armazena as notas parciais; calcula e armazena a média; e, por fim, informa o resultado.
+
+No problema apresentado, é possível utilizar matrizes com várias posições para armazenar as notas para o cálculo da média e, posteriormente, mostrar o resultado. Na figura 2 é mostrado um exemplo de matriz.
+
+
+Para utilizar uma matriz é necessário usar duas estruturas de repetição do tipo PARA, uma para linha e outra para coluna. Vejamos a seguir:
+
+ 
+
+PARA <variável> DE <valor-inicial> ATE <valor-final> [passo <incremento>]FACA
+
+  PARA <variável> DE <valor-inicial> ATE <valor-final> [passo <incremento>] FACA
+    <sequência-de-comandos para acessar um vetor>
+  FIMPARA  
+
+FIMPARA
+
+ 
+
+É necessário declarar a matriz em uma seção de variáveis, mas é importante saber que não será escrito “matriz” e sim “vetor” na declaração do seu algoritmo, que será executado no Visualg. Variável é o nome dado a sua matriz, seguido de dois pontos e da palavra vetor, que é reservada e indica que esta variável é um vetor com valor inicial e valor final da linha e da coluna de um tipo, que pode ser inteiro, real, caractere.
+
+ 
+
+Declaração da Matriz dentro da área de declaração de variáveis:
+
+ VARIÁVEL: vetor [VALOR INICIAL L…VALOR FINAL L, VALOR INICIAL  C…VALOR FINAL C] de TIPO
+
+ 
+
+Exemplo da declaração:
+
+notas: vetor [1…50,1…4] de inteiro
+
+ 
+
+Exemplo de Matriz:
+
+PARA contador i 1 DE 1 ATE 50 FACA
+
+   ESCREVA(“Aluno(a) número ", i)
+
+   PARA contador j 1 DE 1 ATE 4 FACA
+
+       ESCREVA("Digite a nota: ", j)
+
+       LEIA(notas[i , j])
+
+   FIMPARA
+
+FIMPARA
+
+ 
+
+Exemplo do algoritmo completo (Figura 2)
+
+
+Exemplo Prático
+
+ 
+
+Para executar o pseudocódigo utilize o Visualg. No ambiente disponibilizado pela Faculdade Descomplica, basta acessar o ícone do Visualg (Figura 3).
+
+
+Escreva o algoritmo em pseudocódigo, mostrado na Figura 4, na Área de Algoritmos da ferramenta.
+
+
+
+​Para executar seu algoritmo, basta clicar no ícone “Executar” mostrado na Figura 5, ou F9 do seu teclado.​
+
+
+​Na Figura 6 observamos a tela de resultado.​
+
+
+
+
+
+
+Atividade extra
+
+Assista ao filme “Matrix” Esse filme, primeiro de sua trilogia, nos mostra um mundo dominado pelas máquinas no qual Neo (Keanu Reeves), que trabalha como um hacker, descobre que ele e toda a raça humana vivem na verdade dentro da Matrix, um programa de computador.
+
+ 
+
+ 
+
+Referência Bibliográfica
+
+ 
+
+GUEDES, S. (Org.). Lógica de programação algorítmica. Pearson: 2014.
+MANZANO, J. A. N. G.; OLIVEIRA, J. F. Estudo Dirigido de Algoritmos. 15. ed. São Paulo: Érica, 2012
+PUGA, S.; RISSETTI, G. Lógica de programação e estruturas de dados, com aplicações em Java. Pearson: 2016.
+RIBEIRO, J. A. Introdução à programação e aos algoritmos. 1. ed. Rio de Janeiro: LTC, 2019
+
+
+
+
+Atividade Prática – Aula 8
+
+Título da Prática: Soma de Matriz
+
+Aulas Envolvidas nesta Prática: Matriz
+
+Objetivos: Praticar lógica de programação e desenvolvimento de algoritmos.
+
+Materiais, Métodos e Ferramentas: Para realizar este exercício, vamos utilizar Visualg para testar o algoritmo proposto no desenvolvimento da prática em questão.
+
+ 
+
+Atividade Prática
+Com base no exemplo abaixo e com os conhecimentos adquiridos até agora, desenvolva um algoritmo em pseudocódigo com uma matriz 5x5 que some cada valor de uma posição da matriz com 10. Mostre o resultado na tela. 
+Exemplo:
+
+
+Após desenvolver seu código conforme a descrição acima, copie e cole na caixa de texto (a resposta da Atividade Prática sempre será em código (pseudocódigo)).
+
+ 
+
+Gabarito Atividade Prática
+
+

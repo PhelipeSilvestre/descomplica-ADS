@@ -1,0 +1,18 @@
+/*Estilizando tabelas com pseudo-classes
+
+Com o uso do CSS, é possível aplicar estilos a elementos por meio das pseudo-classes. Pseudo-classes são palavras-chave adicionadas aos seletores que definem um estado especial do elemento selecionado. A lista completa de pseudo-classes pode ser encontrada na documentação para desenvolvedores da Mozilla. No exemplo a seguir, uma tabela é utilizada, atribuindo a cor de fundo #e9e9e9 para as linhas pares e a cor de fundo #bdbdbd para as linhas ímpares.
+
+Saiba mais: https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-classes
+*/
+
+tr:nth-child(even) {
+ 
+         background: #e9e9e9;
+ 
+}
+ 
+tr:nth-child(odd) {
+ 
+    background: #bdbdbd;
+ 
+}

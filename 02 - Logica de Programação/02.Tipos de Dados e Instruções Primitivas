@@ -1,0 +1,93 @@
+Tipos de Dados e Instruções Primitivas
+Bem-vindo ao estudo sobre Tipos de Dados e Instruções Primitivas! Este estudo ajudará na compreensão de alguns conceitos que são importantes no contexto de programação, são eles: dado, informação e instrução.
+
+No contexto da computação, dados referem-se a tudo aquilo que é fornecido ao computador de forma bruta (RIBEIRO, 2019). Esses dados são tratados (processados) por um computador, para gerar informações ou resolver problemas (MANZANO e OLIVEIRA, 2012).
+
+Vamos conhecer os tipos de dados?
+
+ 
+
+Dado, Informação e Instrução
+
+ 
+
+Dado: é como uma espécie de matéria prima da informação e que, de forma isolada, não traz conhecimento (PUGA; RISSETTI, 2016; MANZANO; OLIVEIRA, 2012). Vamos a um exemplo: o número 30 não diz nada, pois consiste apenas num valor aleatório.
+
+Informação: pode-se dizer que são dados em um contexto, ou seja, dados que foram tratados e analisados trazendo um significado (PUGA; RISSETTI, 2016; MANZANO; OLIVEIRA, 2012). Vamos a um exemplo: a idade 30 anos. Nesse caso, o número 30 significa quantos anos a pessoa tem.
+
+Instrução: muito utilizada na área de programação e desenvolvimento de sistemas. Pode-se dizer que constitui um conjunto de palavras-chaves (vocabulário) de uma linguagem de programação para o processamento de dados (PUGA; RISSETTI, 2016; MANZANO; OLIVEIRA, 2012). Vamos a um exemplo: no Visualg, o comando “Escreva” corresponde a uma ação do algoritmo. Esta ação será processada e, como consequência, aparecerá alguma mensagem na tela do computador.
+
+ 
+
+Tipo de Dados
+
+O tipo de um dado define o conjunto de valores ao qual o dado pertence, bem como o conjunto de todas as operações que podem atuar sobre qualquer valor daquele conjunto de valores (MANZANO e OLIVEIRA, 2012).
+
+ 
+
+Dados numéricos inteiros: consistem nos números inteiros e nas operações de adição, subtração, multiplicação, divisão inteira e resto (RIBEIRO, 2019). Em Portugol, os números inteiros são escritos apenas como a concatenação dos dígitos 0 a 9, tal como em 33, 0 e 128. Números negativos são representados com o sinal “−” na frente do número, tal como −128.
+
+Os dados numéricos inteiros envolvem números positivos e negativos, com exceção dos números fracionários.
+
+ 
+
+O tipo numérico real: consiste nos números reais e das operações de adição, subtração, multiplicação e divisão. Em Portugol, os números reais são caracterizados por possuírem uma parte inteira e uma parte fracionária (RIBEIRO, 2019). Por exemplo, a parte inteira e a parte fracionária do número real 33.7 são 33 e 7, respectivamente. Note que um “ponto” e não uma vírgula é usado para separar a parte inteira da fracionária. Assim como os números inteiros negativos, números reais negativos são representados com o sinal “−” na frente do número, tal como -26.8.
+
+ 
+
+Dados literais: uma sequência contendo letras, números e símbolos especiais.
+
+No contexto da programação ou de algoritmos, uma sequência de caracteres deve sempre ser indicada entre aspas duplas. Este tipo de dado é também muitas vezes chamado de alfanumérico, cadeia (ou cordão), caracteres ou, ainda, do inglês, STRING.
+
+Diz-se que o dado do tipo literal possui um comprimento dado pelo número de caracteres nele contido (RIBEIRO, 2019).
+
+ 
+
+Dados lógicos: constituem os dados com valores de verdadeiro ou falso, as operações de negação, conjunção e disjunção, também são conhecidas como booleanas (RIBEIRO, 2019).
+
+Exemplo de Expressão:
+
+Se <condição> Verdadeiro Senão Falso. Dependendo da condição, o resultado pode assumir um dos dois valores.
+
+Este tipo de dado será estudado com mais detalhes posteriormente.
+
+ 
+
+Exemplo Prático
+
+Para executar o pseudocódigo utilize o Visualg. No ambiente disponibilizado pela Faculdade Descomplica basta acessar o ícone do Visualg (Figura 1).
+
+
+​Escreva um algoritmo em pseudocódigo na Área de Algoritmos da ferramenta, conforme mostrado na da Figura 2.​
+
+
+​Para executar seu algoritmo clique no ícone “Executar” mostrado na Figura 3, ou F9 do seu teclado.​
+
+
+​Na Figura 4 abaixo temos a tela de resultado que é exibida ao executar o algoritmo.​
+
+
+
+
+
+
+Atividade extra
+
+O que são as comunidades de tecnologia?
+
+Uma comunidade de TI é formada por programadores e aspirantes com os mesmos objetivos. Os “clãs” costumam se reunir virtualmente para compartilhar ideias e agendar encontros, sendo extremamente úteis para quem está dando o pontapé inicial.
+
+Entre as vantagens de ingressar nas comunidades de tecnologia está a possibilidade de tirar dúvidas rapidamente. Provavelmente, você vai encontrar algum questionamento já existente, com diferentes perspectivas sobre o mesmo tema. Pesquise sobre algumas comunidades conhecidas no mundo da computação.
+
+
+
+
+
+Referência Bibliográfica
+
+ 
+
+GUEDES, S. Lógica de programação algorítmica. Pearson: 2014.
+MANZANO, J. A. N. G.; OLIVEIRA, J. F. Estudo Dirigido de Algoritmos. 15. ed. São Paulo: Érica, 2012
+PUGA, S.; RISSETTI, G. Lógica de programação e estruturas de dados, com aplicações em Java. Pearson: 2016.
+RIBEIRO, J. A. Introdução à programação e aos algoritmos. 1. ed. Rio de Janeiro: LTC, 2019

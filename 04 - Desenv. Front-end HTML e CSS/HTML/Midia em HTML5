@@ -1,0 +1,56 @@
+Como inserir imagens na página HTML
+
+A tag <img> é usada para incorporar uma imagem em uma página da web. A sintaxe é <img src=”url” alt=”Texto alternativo”>. Este elemento não possui tag de fechamento e possui dois atributos obrigatórios:
+
+●     src: é o diminutivo de source e deve receber o caminho para a imagem
+
+●     alt é o diminutivo de alternative e deve receber um texto alternativo para a imagem
+
+
+
+Como inserir vídeos na página HTML
+
+Para inserir um vídeo em uma página HTML utiliza-se a seguinte sintaxe:
+
+<video width=“320”  height=“240” controls>
+    <source src=“movie.mp4”  type=“video/mp4”>
+    <source src=“movie.ogg”  type=“video/ogg”>
+    Seu navegador não suporta a exibição  deste vídeo
+  </video> 
+Nessa estrutura, o elemento “source” é equipado com os atributos “src” e “type”, os quais especificam a localização e o formato do arquivo de vídeo, respectivamente. É viável definir múltiplos elementos “source” com diversos tipos de vídeo. O navegador dará preferência ao primeiro formato que seja reconhecido. caso nenhum seja suportado, será exibida a mensagem inserida ao final (Seu navegador não suporta a exibição deste vídeo).
+
+O atributo “controls” desempenha a função de adicionar controles de vídeo, como play, pause e volume. Outros atributos podem ser empregados no controle do vídeo, tais como “muted” para iniciar o vídeo sem áudio e “autoplay” para fazê-lo iniciar automaticamente quando a página carrega. Também é possível estabelecer a altura (height) e a largura (width) da tag “video”. é aconselhável sempre realizar essas definições.
+
+
+
+Como apresentar conteúdo em listas
+
+Existem 3 formas de se exibirem listas em HTML:
+
+1.   <ul>: Representa unordered list, ou seja, listas não ordenadas;
+
+2.   <ol>: Representa ordered list, ou seja, listas ordenadas;
+
+3.   <dl>: Representa description list, ou seja, listas de descrição
+
+Para as listas ordenadas e não ordenadas, os itens são definidos pela tag <li> e a sintaxe final fica desta forma:
+
+<ul>
+           <li>Primeiro  item</li>
+           <li>Segundo  item</li>
+           <li>Terceiro  item</li>
+  </ul>
+ 
+<ol>
+           <li>Primeiro  item</li>
+           <li>Segundo item</li>
+           <li>Terceiro  item</li>
+  </ol>
+Para a lista de descrição utiliza-se as tags <dt> para definição de termo e <dd> para descrição de termo e a sintaxe fica como a seguir:
+
+<dl>
+           <dt>Primeiro  item</dt>
+           <dd>-  Descrição do primeiro item</dd>
+           <dt>Segundo  item</dt>
+           <dd>-  Descrição do segundo item</dd>
+  </dl>

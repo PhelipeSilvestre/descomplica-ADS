@@ -1,0 +1,37 @@
+/*
+Propriedades para texto
+
+Com o CSS podemos definir propriedades do texto como: tamanho da fonte, cor da fonte, peso da fonte, tipo da fonte, espaçamento entre linhas e espaçamento entre letras.
+*/
+
+p {
+  text-align: center;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-style: italic;
+
+  font-size: 14px;
+
+  text-shadow: 3px 3px 3px #ababab;
+
+  color: white;
+
+  text-decoration-line: underline;
+
+  font-weight: bold;
+
+  line-height: 90%;
+
+  background-color: green;
+}
+
+/*
+No exemplo acima, o seletor p vai atribuir aos parágrafos da página: alinhamento do texto ao centro, fonte Arial, tipo de fonte itálica, tamanho da fonte de 14 pixels, sombreamento ao texto, cor cinza, decoração sublinhada, negrito para peso da fonte e altura da linha de 80% do tamanho da fonte e cor de fundo verde.
+
+A propriedade font-family permite que se faça uma lista de prioridades de famílias de fontes e/ou nomes genéricos de famílias a serem utilizadas. O navegador irá utilizar a primeira fonte da lista que for encontrada no computador, ou poderá fazer o download utilizando a informação contida na regra @font-face.
+
+A propriedade margin do CSS define a área de margem nos quatro lados do elemento.
+
+
+*/

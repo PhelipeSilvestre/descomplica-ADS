@@ -1,0 +1,145 @@
+Comandos de Decisão
+Bem-vindo ao estudo sobre Comandos de Decisão! Essa aula ajudará na compreensão de alguns conceitos que são importantes no contexto de programação. Vamos conhecer melhor esses conceitos?
+
+Até agora, foram trabalhados somente algoritmos que efetuam tarefas simples, como a entrada e saída de dados e pequenos cálculos matemáticos. É possível perceber que os algoritmos mostrados até agora não possuem poder de decisão, ou seja, eles sempre executam as mesmas tarefas, independentemente dos resultados obtidos. Portanto, em alguns momentos, é preciso tomar decisões que muitas vezes são difíceis e que podem alterar a direção da execução das ações do algoritmo (MANZANO; OLIVEIRA, 2012).
+
+Em programação, essas decisões podem ser chamadas de Estruturas de Decisão, Estruturas de Controle ou Testes Condicionais. Sendo assim, permitem executar um conjunto diferente de comandos, dependendo do resultado de um teste utilizando operadores relacionais. Este resultado pode ser verdadeiro ou falso (MANZANO; OLIVEIRA, 2012; RIBEIRO, 2019).
+
+ 
+
+SE, SE-SENAO e SE-SENAO Aninhados
+
+Comando SE (simples) 
+
+Este comando faz apenas uma verificação em uma ou mais expressões lógicas. Se o resultado deste teste for verdadeiro, os comandos de dentro do bloco serão executados. Caso o resultado seja falso, nenhum comando do bloco SE é executado. Na Figura 1 são mostrados a estrutura e o fluxograma. Na Figura 2 o exemplo apresentado no fluxograma é mostrado em formato de pseudocódigo.
+
+
+
+Estrutura e Fluxograma
+
+
+Pseudocódigo
+
+
+Comando SE-SENAO
+
+Este comando faz uma verificação em uma ou mais expressões lógicas. Se o resultado deste teste for verdadeiro, os comandos dentro do bloco serão executados. Caso o resultado seja falso, somente os comandos do bloco SENAO serão executados. A estrutura e o fluxograma são mostrados na Figura 3. Na Figura 4 vemos o exemplo exibido no fluxograma da Figura, sendo que em formato de pseudocódigo.
+
+
+
+
+Estrutura e Fluxograma
+
+
+Pseudocódigo
+
+
+Comando SE-SENAO (Aninhados)
+
+Consiste basicamente em várias estruturas SE-SENAO, uma dentro da outra. Quando a execução chega ao SENAO, outra expressão é testada. Na Figura 5 temos a estrutura e o fluxograma. Na Figura 6 o exemplo apresentado no fluxograma da Figura 5 é mostrado em formato de pseudocódigo.
+
+
+
+Estrutura e Fluxograma
+
+
+Pseudocódigo
+
+
+ESCOLHA-CASO (em inglês SWITCH-CASE),
+
+O comando ESCOLHA-CASO é outra opção quando se tem várias estruturas de decisão (SE-ENTÃO-SENÃO) aninhadas. A proposta desta estrutura é permitir ir direto ao bloco de código desejado, dependendo do valor de uma variável de verificação. Ou seja, determina qual a ação a ser tomada com base no resultado de uma seleção. a estrutura e o fluxograma são mostrados na Figura 7. Na Figura 8 o mesmo exemplo apresentado no fluxograma da Figura 7 é mostrado em formato de pseudocódigo.
+
+
+
+Estrutura e Fluxograma
+
+
+Pseudocódigo
+
+
+Exemplo Prático
+
+Para executar o pseudocódigo utilize o Visualg. No ambiente disponibilizado pela Faculdade Descomplica, basta acessar o ícone do Visualg (Figura 9).
+
+
+Exemplo SE
+
+Escreva o algoritmo em pseudocódigo exibido na Figura 10 na Área de Algoritmos da ferramenta.
+
+
+Para executar seu algoritmo, é só clicar no ícone “Executar” mostrado na Figura 11, ou F9 do seu teclado.
+
+
+Na Figura 12 abaixo, temos a tela com o resultado obtido após a execução.
+
+
+Exemplo ESCOLHA-CASO
+
+Escreva o algoritmo em pseudocódigo mostrado na Figura 13 na Área de Algoritmos da ferramenta.
+
+
+Para executar seu algoritmo, clique no ícone “Executar” mostrado na Figura 11, ou  F9 do seu teclado.
+
+Na Figura 14 abaixo observamos a tela de resultado.
+
+
+Atividade extra
+
+Assista ao filme “Privacidade Hackeada” Um original Netflix, esse documentário expõe através de histórias reais de diferentes lados do escândalo Cambridge Analytica/Facebook, o perigoso e chocante mundo da exploração de dados.
+
+
+
+
+
+Referência Bibliográfica
+
+GUEDES, S. (Org.). Lógica de programação algorítmica. Pearson: 2014.
+
+MANZANO, J. A. N. G.; OLIVEIRA, J. F. Estudo Dirigido de Algoritmos. 15. ed. São Paulo: Érica, 2012
+
+PUGA, S.; RISSETTI, G. Lógica de programação e estruturas de dados, com aplicações em Java. Pearson: 2016.
+
+RIBEIRO, J. A. Introdução à programação e aos algoritmos. 1. ed. Rio de Janeiro: LTC, 2019
+
+​
+
+
+
+Atividade Prática – Aula 5
+
+Título da Prática: Maior Número
+
+Aulas Envolvidas nesta Prática: Tomada de Decisão
+
+Objetivos: Praticar lógica de programação e desenvolvimento de algoritmos.
+
+Materiais, Métodos e Ferramentas: Para realizar este exercício, vamos utilizar Visualg para testar o algoritmo proposto no desenvolvimento da prática em questão.
+
+
+
+Atividade Prática
+
+A) Com os conhecimentos adquiridos até agora, desenvolva um algoritmo em pseudocódigo que solicita ao usuário digitar 2 números. Após o usuário digitar teste se o primeiro número digitado é menor que o segundo número digitado, se verdadeiro mostre na tela o número maior, senão mostre os 2 números digitados.
+
+B)  Execute o código do exemplo abaixo e mostre o resultado das escolhas: Opção 1 e o número 25. Em um novo teste, Opção 2 e o número 100.
+
+
+Gabarito Atividade Prática
+
+A.
+
+
+B.
+
+Opção: 1
+
+Número: 25
+
+Resultado: 50
+
+Opção: 2
+
+Número: 100
+
+Resultado: 300

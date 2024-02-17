@@ -1,0 +1,94 @@
+Vetor/Array
+Bem-vindo ao estudo sobre Vetor! Essa aula te ajudará na compreensão de alguns conceitos que são importantes no contexto de programação. Vamos conhecer melhor esses conceitos?
+
+Estrutura Homogênea Unidimensional é uma estrutura de dados muito simples, também conhecida como vetor ou array. Possui apenas uma dimensão e pode armazenar diversas variáveis do mesmo tipo. Cada item (ou elemento) do vetor pode ser acessado por um índice (RIBEIRO, 2019).
+
+Imagine o seguinte problema: Você precisa criar um algoritmo que lê o nome de uma lista de alunos de uma turma. E se essa turma tem 50 alunos? No problema apresentado, é possível utilizar um vetor de 50 posições para armazenar os nomes dos 50 alunos.
+
+Uma maneira simples de entender, é imaginar uma gaveta de gavetas ou uma gaveta com diversas repartições. Vetor nada mais é do que uma variável que armazena várias variáveis do mesmo tipo, como mostra a Figura 1 (MANZANO; OLIVEIRA, 2012).
+
+
+Para utilizar o vetor é necessário ter uma estrutura de repetição. Neste exemplo, usamos Estrutura PARA.
+
+ 
+
+PARA <variável> DE <valor-inicial> ATE <valor-limite> [passo <incremento>] FACA
+   <sequência-de-comandos para acessar um vetor>
+FIMPARA
+
+ 
+
+É necessário declarar o vetor em uma seção de variáveis. Variável é o nome dado ao seu vetor seguido de dois pontos. A palavra vetor é reservada e  indica que esta variável é um vetor com valor inicial e valor final de um tipo (separados por dois pontos), que pode ser inteiro, real, caractere.
+
+Declaração do Vetor dentro da área de declaração de variáveis:
+
+VARIÁVEL: vetor [VALOR INICIAL…VALOR FINAL] de TIPO
+
+ 
+
+Exemplo da declaração:
+
+nomes: vetor [1…5] de caracter
+
+ 
+
+Exemplo do Vetor: armazena 5 nomes de alunos digitados pelo usuário em um vetor
+
+PARA contador i 1 DE 1 ATE 5 FACA
+
+   ESCREVA("Digite o nome do aluno(a) número ", contadorLoop1, " de 5: ")
+
+   LEIA(nomes[contador])
+
+FIMPARA
+
+ 
+
+Exemplo do algoritmo completo (Figura 2):
+
+
+Exemplo Prático
+
+Para executar o pseudocódigo utilize o Visualg. No ambiente disponibilizado pela Faculdade Descomplica, basta acessar o ícone do Visualg (Figura 3).
+
+
+​Escreva o algoritmo em pseudocódigo, mostrado na Figura 4, na Área de Algoritmos da ferramenta.​
+
+
+​Para executar seu algoritmo, é só clicar no ícone “Executar” mostrado na Figura 5, ou F9 do seu teclado.​
+
+
+Na Figura 6 vemos a tela de resultado.
+
+
+ 
+
+ 
+
+Atividade extra
+
+Assista ao filme “Jobs (2013)” o Ashton Kutcher interpreta Steve Jobs nesse filme de Joshua Michael Stern, que começa ainda 1976, quando Jobs abandonou a faculdade e deu início a uma revolução junto com seu amigo Steve Wozniak, um gênio da tecnologia. Juntos eles inventaram o primeiro computador pessoal, chamado Apple 1. A narrativa apresenta a personalidade controversa de Jobs e como, apesar de ter mudado o mundo para sempre com a Apple, o fato de ele ter passado por cima dos outros no processo prejudicou sua vida pessoal. Está disponível no catálogo da Amazon Prime Video.
+
+
+
+
+
+Referência Bibliográfica
+
+ 
+
+GUEDES, S. (Org.). Lógica de programação algorítmica. Pearson: 2014.
+MANZANO, J. A. N. G.; OLIVEIRA, J. F. Estudo Dirigido de Algoritmos. 15. ed. São Paulo: Érica, 2012
+PUGA, S.; RISSETTI, G. Lógica de programação e estruturas de dados, com aplicações em Java. Pearson: 2016.
+RIBEIRO, J. A. Introdução à programação e aos algoritmos. 1. ed. Rio de Janeiro: LTC, 2019
+Atividade Prática
+Com os conhecimentos adquiridos até agora, desenvolva um algoritmo em pseudocódigo que solicite ao usuário 10 nomes e 10 notas e calcule a média das notas da turma. Apresente na tela, o índice do vetor, os nomes, as notas e o resultado da média.
+
+Após desenvolver seu código conforme a descrição acima, copie e cole na caixa de texto (a resposta da Atividade Prática sempre será em código (pseudocódigo)).
+
+ 
+
+ 
+
+Gabarito Atividade Prática
+

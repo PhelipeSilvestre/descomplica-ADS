@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+  </head>
+  <body>
+    <section>
+      <h1>Formularios: Estrutura simples</h1>
+
+      <!--
+        <form></form> cria o formulario
+        - method="get" indica o tipo de envio do formulario
+        - action="https://www.google.com.br/search" indica o caminho para o formulario
+
+        <label></label> indica o label do formulario
+        <input type="text" name="nome" /> indica o input do formulario
+
+      -->
+      <form method="get" action="https://www.google.com.br/search">
+        <label>Nome</label><br />
+        <input type="text" name="nome" /><br /><br />
+        <label>Email</label><br />
+        <input type="text" name="email" /><br /><br />
+        <label>Comentario</label><br />
+        <textarea rows="5" name="comentario"> </textarea><br />
+        <!--a tag textarea cria uma caixa de texto, rows="5" indica o tamanho da caixa-->
+        <button>Enviar</button>
+        <!--button indica o botão de envio-->
+      </form>
+    </section>
+    <br />
+
+    <hr />
+    <!--separação-->
+
+    <section>
+      <h1>Formularios: Estrutura complexa</h1>
+
+      <form method="post" action="">
+        <fieldset>
+          <legend>Formulario de cadastro</legend>
+
+          <label
+            >Nome:<br />
+            <input type="text" name="nome" /><br /><br />
+          </label>
+
+          <label
+            >Sobrenome:<br />
+            <input type="text" name="sobrenome" /><br /><br />
+          </label>
+
+          <label
+            >Data de Nascimento:<br />
+            <input type="date" name="data" /><br /><br /> <!-- o type indica o tipo do input data-->
+          </label>
+
+          <label
+            >Sexo:<br />
+            <label>
+              <input type="radio" name="sexo" value="masculino" /> <!--o ttype radio criará botoes de opções-->
+              Masculino
+            </label>
+            <label>
+              <input type="radio" name="sexo" value="feminino" />
+              Feminino
+            </label> </label
+          ><br /><br />
+
+          <label
+            >Email:<br />
+            <input type="email" name="email" /><br /><br />
+          </label>
+
+          <label
+            >Telefone:<br />
+            <input type="tel" name="tel" /><br /><br />
+          </label>
+
+          <label
+            >Senha:<br />
+            <input
+              type="password"
+              name="password"
+              required
+              pattern="[A-Z] {3} [0-9] {4}" 
+              title="A senha deve ter pelo menos 3 letras maiúsculas e 4 números" /><br /><br
+          /></label><!-- type password indica uma senha / Required patters indica que o campo é obrigatório / title indica o texto de ajuda-->
+
+          <input type="submit" value="Cadastrar" />
+        </fieldset>
+      </form>
+    </section>
+  </body>
+</html>

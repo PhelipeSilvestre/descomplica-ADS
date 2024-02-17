@@ -1,0 +1,60 @@
+O que são tabelas e qual é a estrutura básica de uma tabela
+
+Uma tabela é um conjunto estruturado de dados composto por linhas e colunas. A tabela permite pesquisar de forma rápida e fácil valores que indicam algum tipo de conexão entre diferentes tipos de dados, como uma pessoa e sua idade ou um horário no dia da semana, por exemplo.
+
+As tabelas em HTML são iniciadas com a tag <table> e terminam com o fechamento dela </table>. Cada linha da tabela começa com uma tag <tr> e termina com uma </tr>. E cada célula da tabela é começa com a tag <td> e termina com a </td>, como no exemplo a seguir:
+
+<table>
+      <tr>
+           <th>Coluna  1</th>
+           <th>Coluna  2</th>
+           <th>Coluna  3</th>
+      </tr>
+      <tr>
+           <td>Conteúdo  1</td>
+           <td>Conteúdo  2</td>
+           <td>Conteúdo  3</td>
+      </tr>
+  </table>
+A tabela pode ter quantas linhas forem necessárias, apenas certifique-se de que o número de células seja o mesmo em cada linha. Caso deseje que a primeira linha seja um cabeçalho, utilize a tag <th> em vez da tag <td> (como no exemplo acima isso deixará o conteúdo em negrito e centralizado
+
+
+
+Estrutura semântica de uma tabela
+
+Podemos conferir semanticidade a uma tabela ao adicionar algumas tags do HTML5, como:
+
+●     A tag <thead>, que define onde está o cabeçalho
+
+●     A tag <tbody>, que define onde está o corpo da tabela
+
+●     A tag <tfoot>, que define onde está o rodapé
+
+●     A tag <caption>, que possibilita definir o título da tabela, importante para que o leitor possa ter uma ideia do conteúdo dela.
+
+Os navegadores podem usar esses elementos para permitir a rolagem do corpo da tabela independentemente do cabeçalho e do rodapé. Além disso, ao imprimir uma tabela grande, que abranja várias páginas, esses elementos podem permitir que o cabeçalho e o rodapé da tabela sejam impressos na parte superior e inferior de cada página. Por fim, essas tags também são de suma importância para leitores de tela e ferramentas de busca. A sintaxe final é a que se segue:
+
+<table>
+           <thead>
+                    <tr>
+                             <th>Coluna  1</th>
+                             <th>Coluna  2</th>
+                    </tr>
+           </thead>
+           <tbody>
+                    <tr>
+                             <td>Conteúdo  coluna 1 linha 1</td>
+                             <td>Conteúdo  coluna 2 linha 1</td>
+                    </tr>
+                    <tr>
+                             <td>Conteúdo  coluna 1 linha 2</td>
+                             <td>Conteúdo  coluna 2 linha 2</td>
+                    </tr>
+           </tbody>
+           <tfoot>
+                    <tr>
+                             <td>Conteúdo  coluna 1 linha 3</td>
+                             <td>Conteúdo  coluna 2 linha 3</td>
+                    </tr>
+           </tfoot>
+  </table> 

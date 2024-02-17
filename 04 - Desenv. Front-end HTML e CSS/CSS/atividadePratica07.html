@@ -1,0 +1,56 @@
+<!--Atividade Prática 7: CSS: Entendendo sobre estilos
+
+Título da Prática: Estilizando uma Página Web com CSS
+
+Enunciado:
+
+1. Crie uma página HTML básica com os seguintes elementos: um título (<h1>), dois parágrafos (<p>) e uma lista não ordenada (<ul>) com três itens (<li>).
+
+2. Aplique estilos inline ao título, alterando sua cor para azul e alinhando-o ao centro.
+
+3. Utilize estilos internos para:
+
+   - Alterar a cor de fundo da página para cinza claro.
+
+   - Estilizar os parágrafos com fonte “Arial”, tamanho de 16px e cor verde.
+
+4. Crie um arquivo externo chamado “styles.css”. Neste arquivo:
+
+   - Defina a cor dos itens da lista para roxo.
+
+   - Aplique um espaçamento de 15px entre os itens da lista.
+
+5. Vincule o arquivo “styles.css” à sua página HTML e verifique se os estilos foram aplicados corretamente.
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Atividade Pratica - 07</title>
+   <!--2° aplicar estilo internamente ao HTML-->
+   <style> 
+      body{
+         background-color: lightgray;
+      }
+      p{
+         font-family: Arial;
+         font-size: 16px;
+         color: green;
+      }
+   </style>
+   <link rel="stylesheet" href="atividadePratica07.css"><!--3° aplicar estilo externamente com um documento .CSS-->
+</head>
+<body>
+   <h1 style="color:blue; text-align:center">Estilizando uma Página Web</h1> <!--1° aplicar estilo inline-->
+   <p>Este é o primeiro parágrafo.</p>
+   <p>Este é o segundo parágrafo.</p>
+   <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+   </ul>
+</body>
+</html>

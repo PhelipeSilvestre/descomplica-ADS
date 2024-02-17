@@ -1,0 +1,5 @@
+Resumo
+
+O objeto Array permite armazenar vários valores em uma única variável. Ele armazena uma coleção sequencial de tamanho fixo de elementos do mesmo tipo. Uma matriz é usada para armazenar uma coleção de dados, mas geralmente é mais útil pensar em uma matriz como uma coleção de variáveis do mesmo tipo.
+
+O parâmetro Array é uma lista de strings ou inteiros. Ao especificar um único parâmetro numérico com o construtor Array, você especifica o comprimento inicial da matriz. O comprimento máximo permitido para uma matriz é 4.294.967.295.

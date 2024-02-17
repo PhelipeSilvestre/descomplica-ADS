@@ -1,0 +1,46 @@
+/*Usando caixas e atribuindo classes e Ids
+
+<div> É um elemento de divisão de conteúdo. É um contêiner genérico utilizado para agrupar elementos para fins de estilos (usando classes ou ids). Deve ser utilizada somente quando não tiver outro elemento de semântico (tal como <section>, <article>, <header>, <footer> , etc).
+
+Classes e ids permitem ao CSS e ao Javascript selecionarem e acessarem elementos da página HTML. Classes podem ser atribuídas a vários elementos, já os Ids só podem ser atribuídos a um elemento pois ele é o identificador do elemento. No exemplo a seguir, todas as divs de classe subtítulo receberão cor de fundo vermelho e cor de texto branca. E o elemento com id título receberá cor de fundo azul claro, cor de texto preta e texto alinhado ao centro.
+*/
+
+/*
+<style>
+ 
+#titulo {
+ 
+         background-color: lightblue;
+ 
+         color: black;
+ 
+         text-align: center;
+ 
+}
+ 
+.subtitulo {
+ 
+         background-color: red;
+ 
+         color: white;
+ 
+}
+ 
+</style>
+ 
+
+ 
+<h1 id=“titulo”>Cidades</h1>
+ 
+
+ 
+<h2 class=“subtitulo”>Londres</h2>
+ 
+
+ 
+<h2 class=“subtitulo”>Paris</h2>
+ 
+
+ 
+<h2 class=“subtitulo”>Tokyo</h2>
+*/

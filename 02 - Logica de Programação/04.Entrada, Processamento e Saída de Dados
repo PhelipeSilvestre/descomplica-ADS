@@ -1,0 +1,89 @@
+Entrada, Processamento e Saída de Dados
+Bem-vindo ao estudo sobre Entrada, Processamento e Saída! Essa aula te ajudará a compreender alguns conceitos que são importantes no contexto de programação, são eles: Entrada de Dados, Processamentos e Saída dos Dados após serem processados. Vamos conhecer melhor esses conceitos?
+
+ 
+
+Entrada de Dados
+
+A entrada de dados apresenta-se na forma de atividades de registro de dados, como gravação e edição (MANZANO; OLIVEIRA, 2012). Podem ocorrer através de diversas formas, tais como: Teclado, Câmera, Leitor Ótico, Mouse. Na prática, ou seja, através de um algoritmo em pseudocódigo, a instrução leia recebe o valor de entrada digitado pelo usuário.
+
+Saída de Dados
+
+Envolve a transferência de dados produzidos por um processo ou após um processamento do mesmo até o seu destino (MANZANO; OLIVEIRA, 2012).  Como, por exemplo, o resultado mostrado na tela de um algoritmo ou programa. A saída de dados pode ocorrer através de Monitor, Impressora, Caixa de Som, dentre outros.
+
+Na prática, através de um algoritmo em pseudocódigo, a instrução Escreva mostra um tipo de saída, que corresponde ao valor na tela do computador.
+
+Processamento
+
+De maneira geral, o processamento é a ação de converter dados de forma significativa, mais útil e apropriada, gerando uma informação. No contexto da programação, é a execução dos passos para resolver determinado problema.  Constitui a execução de cada linha descrita no algoritmo ou programa, bem como a execução de instruções (MANZANO; OLIVEIRA, 2012).
+
+Por exemplo: Cálculo de uma equação de segundo grau ou uma expressão lógica.
+
+ 
+
+Exemplo Prático
+
+Para executar o pseudocódigo utilize o Visualg. No ambiente disponibilizado pela Faculdade Descomplica, basta acessar o ícone do Visualg (Figura 1).
+
+
+Escreva o algoritmo em pseudocódigo na Área de Algoritmos da ferramenta, como mostrado na Figura 2.
+
+
+​Para executar seu algoritmo é só clicar no ícone “Executar”, mostrado na Figura 3, ou F9 do seu teclado.​
+
+
+​Na Figura 4 vemos a tela de resultado exibido.​
+
+
+ 
+
+ 
+
+Atividade extra
+
+Você conhece o Scratch?
+
+O Scratch é um software que se utiliza de blocos lógicos, e itens de som e imagem, para você desenvolver suas próprias histórias interativas, jogos e animações, além de compartilhar de maneira online suas criações. O Scratch é um projeto do grupo Lifelong Kindergarten no Media Lab do MIT (Instituto de Tecnologia de Massachusets), onde foi idealizado por Mitchel Resnick.
+
+Ele foi projetado especialmente para idades entre 8 e 16 anos, mas é usado por pessoas de todas as idades. O Scratch é usado em mais de 150 países, está disponível em mais de 40 idiomas, e é fornecido gratuitamente para os principais sistemas operacionais (Windows, Linux e Mac). Que tal pesquisar e testar essa ferramenta e descobrir se é divertida e fácil de usar?
+
+
+
+
+
+Referência Bibliográfica
+
+ 
+
+GUEDES, S. (Org.). Lógica de programação algorítmica. Pearson: 2014.
+MANZANO, J. A. N. G.; OLIVEIRA, J. F. Estudo Dirigido de Algoritmos. 15. ed. São Paulo: Érica, 2012
+PUGA, S.; RISSETTI, G. Lógica de programação e estruturas de dados, com aplicações em Java. Pearson: 2016.
+RIBEIRO, J. A. Introdução à programação e aos algoritmos. 1. ed. Rio de Janeiro: LTC, 2019
+ 
+
+ 
+
+
+Atividade Prática – Aula 4
+
+Título da Prática: Soma e Média
+
+Entrada, Processamento e Saída de Dados
+
+Objetivos: Praticar lógica de programação e desenvolvimento de algoritmos.
+
+Materiais, Métodos e Ferramentas: Para realizar este exercício, vamos utilizar Visualg para testar o algoritmo proposto no desenvolvimento da prática em questão.
+
+ 
+
+Atividade Prática
+
+
+Com os conhecimentos adquiridos até agora, desenvolva um algoritmo em pseudocódigo onde 5 números (digitados pelo usuário) deverão ser somados, em seguida calcule a média desses números e apresente na tela a soma e a média calculada. 
+
+ 
+
+
+Gabarito Atividade Prática
+
+

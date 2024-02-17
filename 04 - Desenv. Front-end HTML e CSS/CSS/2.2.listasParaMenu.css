@@ -1,0 +1,37 @@
+/* Formatando listas para menu
+
+Um menu pode ser criado aplicando CSS aos elementos de uma lista não ordenada como a que se segue.
+
+<ul>
+ 
+         <li><a>Item 1</a></li>
+ 
+         <li><a>Item 2</a></li>
+ 
+         <li><li>Item 3</a></li>
+ 
+</ul>
+*/
+
+/*
+Para transformar a lista acima em menu, removemos os marcadores utilizando a propriedade list-style: none; no seletor ul, fazemos os itens li ”flutuarem” para a esquerda com utilizando a propriedade float: left; por fim, adicionamos um espaçamento entre os itens com padding: 10px; e removemos o sobrescrito do link com text-decoration: none;
+*/
+ul {
+ 
+    list-style: none;
+ 
+}
+ 
+ul li {
+ 
+         float: left;
+ 
+}
+ 
+ul li a {
+ 
+    padding: 10px;
+ 
+         text-decoration: none;
+ 
+}

@@ -1,0 +1,77 @@
+<!-- Título da Prática: Formulário de Reserva de Viagem Avançado
+
+Descrição da atividade
+
+1º passo: Crie uma nova página HTML chamada “reserva.html”.
+2º passo: Na página, você deve criar um formulário de reserva de viagem com os seguintes campos: Nome, Email, Serviços Desejados (uma caixa de seleção com opções como Compra de Passagens, Reserva de Hospedagem, Aluguel de Veículos), Forma de Pagamento (um botão de rádio com opções como Cartão de Crédito, Boleto, PIX) e Prazo de Pagamento (uma lista suspensa com opções como À Vista, Cinco Vezes Sem Juros, Dez Vezes Com Juros).
+3º passo: Utilize as tags <form>, <input>, <label>, <select>, <option>, <fieldset> e <textarea> para criar o formulário e seus campos.
+4º passo: Adicione semântica ao formulário utilizando a tag <fieldset> para agrupar os campos do formulário.
+5º passo: Adicione um botão de envio ao formulário utilizando a tag <input> com o tipo “submit”.
+6º passo: Salve seu trabalho e visualize a página no navegador.
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Viagem</title>
+</head>
+<body>
+    <section>
+        <h1>Reserva de Viagem</h1>
+
+        <form>
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+
+                <label for="nome">Nome:</label><br>
+                <input type="text" name="nome" id="nome"><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" name="email" id="email"><br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Serviços Desejados</legend>
+
+                <label>Serviços</label><br><br>
+                <input type="checkbox" name="passagens" id="passagens" value="passagens">
+                <label for="passagens">Compra de Passagens</label><br><br>
+
+                <input type="checkbox" name="hospedagem" id="hospedagem" value="hospedagem">
+                <label for="hospedagem">Reserva de Hospedagem</label><br><br>
+
+                <input type="checkbox" name="veiculos" id="veiculos" value="veiculos">
+                <label for="veiculos">Aluguel de Veículos</label><br><br>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Forma de Pagamento</legend>
+
+                <label for="pagamento">Forma de Pagamento:</label><br>
+                <select name="pagamento" id="pagamento">
+                    <option value="cartao">Cartão de Crédito</option>
+                    <option value="boleto">Boleto</option>
+                    <option value="pix">PIX</option>
+                </select><br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Prazo de Pagamento</legend>
+
+                <label for="prazo">Prazo de Pagamento:</label><br>
+                <select name="prazo" id="prazo">
+                    <option value="aVista">A Vista</option>
+                    <option value="cincoVezes">Cinco Vezes</option>
+                    <option value="dezVezes">Dez Vezes</option>
+                </select><br><br>
+            </fieldset>
+
+            <br>
+            <input type="submit" value="Reservar">    
+              
+    </section>
+</body>
+</html>

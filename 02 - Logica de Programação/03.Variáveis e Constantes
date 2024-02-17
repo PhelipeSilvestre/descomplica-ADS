@@ -1,0 +1,108 @@
+Variáveis e Constantes
+Bem-vindo ao estudo sobre Variáveis e Constantes! Essa aula ajudará na compreensão de alguns conceitos que são importantes no contexto de programação. Neste contexto, variáveis referem-se a tudo aquilo que varia ou modifica, ao contrário das constantes, que se mantêm fixas (MANZANO; OLIVEIRA, 2012). Vamos conhecer melhor esses conceitos?
+
+ 
+
+Variáveis
+
+O que são variáveis? É possível imaginar uma gaveta, onde são guardadas coisas. Essa gaveta, em cada momento, pode ter uma peça de roupa diferente armazenada dentro dela. Por exemplo, hoje a gaveta armazena uma blusa, mas amanhã esta blusa pode ser usada e a gaveta armazenará um lenço ao invés da blusa. No contexto da programação, uma variável armazena um valor, que pode variar ao longo da execução do programa, isto é, em um dado momento a variável “nome” pode conter Débora, mas no decorrer da execução do programa pode passar a conter Anna (MANZANO; OLIVEIRA, 2012).
+
+Uma variável possui nome, tipo e conteúdo. O nome deve ser único, a fim de identificar de forma única a variável em um determinado algoritmo. O tipo define os valores que podem ser armazenados na variável. Seu conteúdo é o valor que ela armazena. É importante lembrar que uma variável só pode armazenar um valor de cada vez. No entanto, ela pode assumir vários valores distintos do mesmo tipo durante a execução do algoritmo. O ato de se criar uma variável é conhecido como declaração de variável (MANZANO; OLIVEIRA, 2012).
+
+É importante ressaltar que toda variável precisa de um identificador para ser manipulada e deve possuir um nome único, não podendo ser uma palavra reservada (por exemplo, o comando Escreva do Visualg) e não podendo conter espaços em branco. Além disso, boas práticas são essenciais para organização e entendimento de um algoritmo ou programa, portanto, é importante mencioná-las. Algumas dessas práticas são: uma variável deve começar com uma letra, que, por padrão, deve ser minúscula e deve permitir também a identificação do valor que representa, como idade, nome, endereço, etc.
+
+Variáveis Válidas: idade, a1, nota_01, telefone, nota3prova1.
+
+Variáveis Inválidas: 1dia, salário do empregado, nota-1, ddd/telefone, 3prova1.
+
+ 
+
+Constantes
+
+As Constantes são fixas, não mudam de valor. É como se fosse uma gaveta que nunca muda seu objeto. No contexto da programação, o valor de uma constante sempre se manterá inalterado em tempo de execução. Um exemplo é o valor do PI que é 3.14 e que não é alterado, de modo que o valor de PI sempre será o mesmo (PUGA; RISSETTI, 2016). Exemplo: Para calcular a área do círculo devemos aplicar o valor PI na expressão A = π . r2
+
+ 
+
+Operadores
+
+Operadores são utilizados para executar cálculos numéricos e relacionar expressões, são eles: Operadores Aritméticos, Relacionais e Lógicos.
+
+ 
+
+Operadores aritméticos
+
+Unários: Manutenção de Sinal (+). O operador possui o mesmo sinal da adição, porém, apenas um número é utilizado e isso indica que esse número é positivo. Inversão de sinal (-), que consiste no mesmo sinal da subtração, um traço, o qual indica que o número é negativo (PUGA; RISSETTI, 2016).
+
+Binários: envolvem 2 valores, são eles: Exponenciação (^), Divisão inteira (), resto da divisão(%), divisão (/), multiplicação (*), adição (+) e subtração (-) (PUGA;RISSETTI, 2016).
+
+ 
+
+Operadores relacionais: Esses operadores relacionam expressões que são combinações de variáveis, constantes e operadores (MANZANO; OLIVEIRA, 2012).
+
+Sobre as expressões, elas podem ser aritméticas ou lógicas. Uma expressão aritmética resulta em um número inteiro ou real, mas uma expressão lógica resulta em “verdadeiro” ou “falso”. São eles: maior que (>), menor que (<), maior ou igual a (>=), menor ou igual a (<=), igual a (=) e diferente (<>).
+
+ 
+
+Operadores lógicos: Esses operadores são utilizados em expressões lógicas, são eles: E, OU e NÃO. O resultado dessas expressões é sempre “verdadeiro” ou “falso” (MANZANO; OLIVEIRA, 2012).
+
+ 
+
+Exemplo Prático
+
+Para executar o pseudocódigo utilize o Visualg. No ambiente disponibilizado pela Faculdade Descomplica, basta acessar o ícone do Visualg (Figura 1).
+
+
+​Escreva algoritmo em pseudocódigo, mostrado na Figura 2, na Área de Algoritmos da ferramenta.​
+
+
+​Para executar o seu algoritmo, você precisa clicar no ícone “Executar” mostrado na Figura 3, ou F9 do seu teclado.​
+
+
+Na Figura 4 vemos a tela de resultado.
+
+
+
+
+
+
+
+
+Atividade extra
+
+Assista ao filme “AI – Artificial Intelligence” do aclamado diretor Steven Spielberg, esse filme impressionou toda uma geração, com a versão de ficção científica da clássica história de Pinóquio. Haley Joel Osment interpreta David, o primeiro menino-robô programado para amar. Adotado por um casal, ele enfrenta uma série de circunstâncias inesperadas e não conquista a aceitação dos humanos nem das máquinas. Por isso, David decide embarcar em uma jornada em busca de seu verdadeiro mundo. Já faz quase 20 anos desde o lançamento do longa, mas é um caso daqueles em que sempre vale a pena ver de novo!
+
+
+
+
+
+Referência Bibliográfica
+
+ 
+
+GUEDES, S. (Org.). Lógica de programação algorítmica. Pearson: 2014.
+MANZANO, J. A. N. G.; OLIVEIRA, J. F. Estudo Dirigido de Algoritmos. 15. ed. São Paulo: Érica, 2012
+PUGA, S.; RISSETTI, G. Lógica de programação e estruturas de dados, com aplicações em Java. Pearson: 2016.
+RIBEIRO, J. A. Introdução à programação e aos algoritmos. 1. ed. Rio de Janeiro: LTC, 2019.
+Atividade Prática – Aula 3
+
+Título da Prática: Soma e Média
+
+Variáveis e Constantes
+
+Objetivos: Praticar lógica de programação e desenvolvimento de algoritmos.
+
+Materiais, Métodos e Ferramentas: Para realizar este exercício, vamos utilizar Visualg para testar o algoritmo proposto no desenvolvimento da prática em questão.
+
+ 
+
+Atividade Prática
+
+
+Com os conhecimentos adquiridos até agora, desenvolva um algoritmo em pseudocódigo onde 5 números deverão ser somados, em seguida calcule a média desses números e apresente na tela a soma e a média calculada.
+
+Após desenvolver seu código conforme a descrição acima, copie e cole na caixa de texto (a resposta da Atividade Prática sempre será em código (pseudocódigo)).
+
+ 
+
+Gabarito Atividade Prática
+

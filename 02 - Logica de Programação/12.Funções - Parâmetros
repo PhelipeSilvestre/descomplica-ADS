@@ -1,0 +1,127 @@
+Funções - Parâmetros
+Bem-vindo ao estudo sobre Funções, agora utilizando Parâmetros! Essa aula ajudará na compreensão de alguns conceitos que são importantes no contexto de programação. Vamos conhecer melhor esses conceitos?
+
+ 
+
+Modularização é a divisão de tarefas, ou seja, o programa é dividido em partes ou módulos. Estes módulos são blocos de instruções que realizam tarefas específicas. Carregado uma vez, o módulo pode ser executado quantas vezes for necessário. Além disso, pode ser usado para economizar espaço e tempo de programação, já que pode ser chamado em várias partes de um mesmo programa (MANZANO; OLIVEIRA, 2012).
+
+Cada módulo, além de ter acesso às variáveis do programa (variáveis globais), pode ter suas próprias variáveis (variáveis locais), que existem apenas durante sua chamada (RIBEIRO, 2019). 
+
+ 
+
+Algumas vantagens na utilização de módulos
+
+Dividir e estruturar um algoritmo em partes logicamente coerentes;
+Facilidade de testar os trechos em separado;
+Evitar repetição do código-fonte;
+Maior legibilidade de um algoritmo.
+ 
+
+Tipos de subprogramas: Procedimentos e Funções
+
+Neste módulo será mostrado o subprograma Funções com Parâmetros.
+
+ 
+
+Funções com Parâmetro
+
+Função é um tipo especial de procedimento onde, depois de executada a chamada, o valor calculado é retornado no nome da função, que passa a ser uma variável da expressão (RIBEIRO, 2019).
+
+Como um exemplo prático, em VisuAlg, a função é um subprograma que retorna um valor, mas, nesse caso, também recebe um valor pelo parâmetro. De modo análogo aos procedimentos, sua declaração geralmente está no começo do algoritmo e sua sintaxe está descrita abaixo.
+
+ 
+
+Estrutura
+
+funcao <nome-de-função> [(<sequência-de-declarações-de-parâmetros>)]: <tipo-de-dado>
+// Seção de Declarações Internas
+inicio
+// Seção de Comandos
+fimfuncao
+
+ 
+
+Exemplo
+
+FUNCAO olaMundo(texto:caracter):caracter
+
+VAR
+
+INICIO
+
+ frase <- texto
+
+RETORNE frase
+
+FIMFUNCAO
+
+ 
+
+Exemplo Completo (Figura 1)
+
+
+Exemplo Prático
+
+ 
+
+Para executar o pseudocódigo utilize o Visualg. No ambiente disponibilizado pela Faculdade Descomplica, basta acessar o ícone do Visualg (Figura 2).
+
+
+​Escreva o algoritmo em pseudocódigo, mostrado na Figura 3, na Área de Algoritmos da ferramenta.​
+
+
+​Para executar seu algoritmo, clique no ícone “Executar”, mostrado na Figura 4, ou a F9 do seu teclado.​
+
+
+​Na Figura 5 temos a tela de resultado​
+
+
+
+
+
+
+Atividade extra
+
+Assista ao filme “O quinto poder” O suspense é baseado na história real do site Wikileaks, fundado por Julian Assange, e mostra a polêmica envolvendo o vazamento na internet de diversos documentos secretos dos Estados Unidos.  Por que assistir? “É importante para o estudante porque retrata o novo mundo de possibilidades que a internet está criando em termos de compartilhamento de informações”, diz Fabrício Velasco, gerente da Hays. Vale observar que o próprio Wikileaks não gostou do filme, dizendo que seu retrato dos acontecimentos foi injusto.
+
+ 
+
+ 
+
+Referência Bibliográfica
+
+ 
+
+GUEDES, S. (Org.). Lógica de programação algorítmica. Pearson: 2014.
+MANZANO, J. A. N. G.; OLIVEIRA, J. F. Estudo Dirigido de Algoritmos. 15. ed. São Paulo: Érica, 2012
+PUGA, S.; RISSETTI, G. Lógica de programação e estruturas de dados, com aplicações em Java. Pearson: 2016.
+RIBEIRO, J. A. Introdução à programação e aos algoritmos. 1. ed. Rio de Janeiro: LTC, 2019
+
+
+
+
+Atividade Prática – Aula 12
+
+Título da Prática: Multiplicação com o uso de Função (Parâmetro)
+
+Aulas Envolvidas nesta Prática: Função - Parâmetro
+
+Objetivos: Praticar lógica de programação e desenvolvimento de algoritmos.
+
+Materiais, Métodos e Ferramentas: Para realizar este exercício, vamos utilizar Visualg para testar o algoritmo proposto no desenvolvimento da prática em questão.
+
+ 
+
+ 
+
+Atividade Prática
+Com os conhecimentos adquiridos até agora, desenvolva um algoritmo em pseudocódigo que multiplique 2 números digitados pelo usuário (utilize função com parâmetros para o cálculo). Mostre o resultado na tela. 
+
+Após desenvolver seu código conforme a descrição acima, copie e cole na caixa de texto (a resposta da Atividade Prática sempre será em código (pseudocódigo)).
+
+ 
+
+ 
+
+Gabarito Atividade Prática
+
