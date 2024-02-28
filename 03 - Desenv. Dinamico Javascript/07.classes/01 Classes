@@ -1,0 +1,176 @@
+Classes
+
+Quando definimos uma classe, um ponto importante é utilizar o construtor. Com ele, é possível manipular os parâmetros que foram passados ao instanciar uma classe.
+
+Ele é definido em um bloco de classe, como se você estivesse definindo um método chamado construtor, embora ele seja realmente manipulado como um caso especial. Exemplo:
+
+class ExemploClass {
+    construtor(param) {
+    console.log("criando uma nova instância da classe e passando o parametro" + param);
+        this.param = param;
+    }
+}
+
+como podemos usar essa classe?
+
+const minha = new ExemploClass("teste da classe");
+// imprime: Criando uma nova instância da classe e passando o parametro teste da classe
+
+
+outra forma de usar classe é através de herança. A herança funciona exatamente como em outras linguagens orientadas a objetos: os métodos definidos na superclasse são acessíveis na subclasse de extensão. Se a subclasse declara seu próprio construtor, então ele deve invocar o construtor pai via super() antes que ele possa acessar this.
+
+class Animal{
+    constructor(tipo){
+        this.tipo = tipo;
+    }
+    come(alimento){ // metodo
+        console.log("Esse animal se alimenta de: " + alimento);
+    }
+} // superclasse Animal 
+
+class Cachorro extends Animal {
+    constructor(tipo) {
+        super(tipo);
+    }
+    latir() {
+        console.log("Cachorro late!!");
+    }
+}
+
+class Gato extends Animal {
+    constructor(tipo) {
+        super(tipo);
+    }
+    miar() {
+        console.log("Gato mia!!");
+    }
+}
+
+// Objeto Pitbull(Cachorro)
+
+const pitbull = new Cachorro("Pitbull");
+pitbull.come("Carne");
+pitbull.latir();
+
+Getters e setters permitem que você defina um comportamento personalizado para ler e escrever uma determinada propriedade em sua classe. Para o usuário, eles aparecem como uma propriedade normal. No entanto, internamente, uma função personalizada é fornecida e usada para determinar o valor quando a propriedade é acessada (o getter) e para executar as alterações necessárias quando é atribuída (o setter). Em uma definição de classe, um getter é escrito como um método sem argumento prefixado pela palavra-chave get. Um setter é semelhante, exceto que ele aceita um argumento (o novo valor que está sendo atribuído). Aqui está uma classe de exemplo que fornece um getter e setter para sua propriedade .nome.
+
+class Professor {
+    constructor(nome, disciplina) {
+        this._nome = nome;
+        this._disciplina = disciplina;
+    }
+
+    set nome(value) {
+        this._nome = value;
+    } // definição de Set: Executa
+    get nome() {
+        return this._nome;
+    }
+    set disciplina(value) {
+        this._disciplina = value;
+    }
+    get disciplina() {
+        return this._disciplina;
+    }
+}
+
+const prof = new Professor("Phelipe", "Programação");
+console.log("O nome do proferror é: " + prof.nome);
+console.log("A disciplina é: " + prof.disciplina);
+
+
+
+Composição
+
+Composição é um padrão de design em que um objeto é composto por outros objetos menores, cada um responsável por uma parte específica da funcionalidade geral. Em JavaScript, a composição é uma técnica que permite criar objetos complexos a partir de outros objetos mais simples, combinando suas funcionalidades.
+
+A composição em JavaScript geralmente é realizada por meio de objetos aninhados ou funções que retornam objetos. Um objeto pode ser composto por outros objetos que fornecem comportamentos específicos. Por exemplo, suponha que você tenha uma classe “Carro” que precisa ter recursos de “Motor”, “Transmissão” e “Rodas”. Em vez de criar uma classe grande que implemente tudo isso, você pode criar objetos separados para cada recurso e combiná-los usando a composição.
+
+Veja um exemplo básico de como usar a composição em JavaScript:
+
+// Classe Motor
+
+class Motor {
+    constructor(cilindrada) {
+        this.cilindrada = cilindrada;
+    }
+
+    ligar() {
+        console.log("Ligando o motor");
+    }
+}
+
+// Classe Carro
+
+class Carro {
+    constructor(motor) {
+        this.motor = motor;
+    }
+
+    acelerar() {
+        console.log(`Acelerando com um motor de ${this.motor.cilindrada} cilindradas`);
+    }
+}
+
+// Criando um objeto Motor
+const motor = new Motor(2000);
+
+// Criando um objeto Carro com o objeto Motor como argumento
+const carro = new Carro(motor);
+
+// Usar o metodo acelerar do objeto Carro
+carro.acelerar();
+
+
+Neste exemplo, a classe “Carro” recebe um objeto “Motor” como argumento do construtor e o armazena em uma propriedade. O método “acelerar” do objeto “Carro” usa o objeto “Motor” para obter informações sobre a cilindrada e imprimir uma mensagem. Isso permite que a classe “Carro” tenha acesso a funcionalidade específica do objeto “Motor” sem precisar implementá-la diretamente.
+
+
+
+
+
+Conteúdo Bônus
+
+Para utilizar da melhor forma as classes em JavaScript, devemos separar cada classe em um arquivo e transformar em um módulo que será importado onde desejamos usar. Vejamos o exemplo abaixo:
+
+module.exports = class Coordenador {
+    // propriedades e funções da classe
+    constructor(nome, tempoDeCasa, email) {
+        this.nome = nome;
+        this.tempoDeCasa = tempoDeCasa;
+        this.email = email;
+        this.dataCadastro = new Date();
+    }
+
+    isSenior() {
+        return this.tempoDeCasa >= 12;
+    }
+
+    getPrimeiroNome() {
+        return this.nome.split(" ")[0];
+    }
+}
+
+
+Para utilizar essa classe em outra classe, temos que fazer o require. Dessa forma, conseguimos usar de uma forma mais organizada o javascript orientado a objetos.
+
+// programa.js
+
+const Coordenador = require("./coordenador");
+const coordenador1 = new Coordenador("Marcelo", 16, "marcelo@email");
+const coordenador2 = new Coordenador("Lucas", 5);
+console.log(coordenador1.nome + " é Senior? " + coordenador1.isSenior());
+console.log(coordenador2.nome + " é Senior? " + coordenador2.isSenior());
+
+Agora podemos chamar o programa e teremos o seguinte resultado:
+
+Marcelo é Senior? false
+Lucas é Senior? true
+
+
+
+
+Referência Bibliográfica
+
+FLANAGAN, David. JavaScript: O Guia Definitivo. 6ª Ed. Porto Alegre: Bookman, 2013.
+
+FREEMAN, Eric. Use a cabeça!: programação JavaScript. 1ª Ed. São Paulo: Alta Books, 2016.
