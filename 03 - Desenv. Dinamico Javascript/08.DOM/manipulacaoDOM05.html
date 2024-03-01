@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="estilo">Div com estilo</div>
+    <div class="estilo">Div com estilo 2</div>
+    <p class="estilo">Elemento p com estilo</p>
+    <p>Isso é <span class="estilo">um elemento p com estilo </span>no span</p>
+  </body>
+
+  <script>
+    const estilos = document.querySelectorAll(".estilo");
+
+    for (var i = 0; i < estilos.length; i++) {
+      estilos[i].style.backgroundColor = "blue";
+      estilos[i].style.color = "white";
+    }
+  </script>
+</html>

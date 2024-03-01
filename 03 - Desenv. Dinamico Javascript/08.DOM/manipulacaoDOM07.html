@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--criando uma lista dinamicamente pelo script-->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista Times de futebol</title>
+  </head>
+  <body>
+    <ul id="times"></ul>
+  </body>
+  <script>
+    var criandoLista = document.querySelector("#times");
+    var listaTimes = ["Corinthians", "Palmeiras", "Santos", "Flamengo"];
+
+    for (var i = 0; i < listaTimes.length; i++) {
+      var li = document.createElement("li");
+      li.textContent = listaTimes[i];
+      criandoLista.appendChild(li);
+      li.style.border = "1px solid black";
+    }
+  </script>
+</html>
