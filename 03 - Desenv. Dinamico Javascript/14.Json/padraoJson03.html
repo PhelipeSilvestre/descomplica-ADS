@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uso do Fetch</title>
+  </head>
+  <body>
+    <h1>Usando o https://fakestoreapi.com/products?limit=10</h1>
+    <div id="carrinho-container"></div>
+  </body>
+  <script>
+    fetch("https://fakestoreapi.com/products?limit=10")
+      .then((response) => response.json())
+      .then((data) => {
+        preencherCarrinho(data);
+      })
+      .catch((error) => {
+        console.log("Ocorreu um erro:", error);
+      });
+
+    function preencherCarrinho(produtos) {
+      const carrinhoContainer = document.getElementById("carrinho-container");
+
+      produtos.forEach((produtos) => {
+        const divProdutos = document.createElement("div");
+        divProdutos.classList.add("produtos");
+
+        const imagem = document.createElement("img");
+        imagem.src = produtos.image;
+        imagem.width = 200;
+        imagem.height = 200;
+        divProdutos.appendChild(imagem);
+
+        const nome = document.createElement("p");
+        nome.textContent = produtos.title;
+        divProdutos.appendChild(nome);
+
+        const preco = document.createElement("p");
+        preco.textContent = produtos.price;
+        divProdutos.appendChild(preco);
+
+        carrinhoContainer.appendChild(divProdutos);
+      });
+    }
+  </script>
+</html>
