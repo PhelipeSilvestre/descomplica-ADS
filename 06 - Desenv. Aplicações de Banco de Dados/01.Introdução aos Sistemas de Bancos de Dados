@@ -1,0 +1,99 @@
+Resumo
+
+Como dados viram informação e, em seguida, informação se torna conhecimento são temas apresentados a seguir. Apresenta-se aqui também um breve histórico dos bancos de dados, sistemas de arquivos e as principais características dos bancos de dados.
+
+DADO X INFORMAÇÃO X CONHECIMENTO
+
+Você provavelmente já ouviu falar uma frase que está cada vez mais aderente à nossa atualidade: “Dados são o novo petróleo” (Clive Humby, 2006). Isso quer dizer que as grandes corporações, sendo elas da área de tecnologia ou não, estão cada vez mais interessada em dados relevantes para seus negócios, ou seja, os dados têm se tornado, cada vez mais, a alma do negócio de muitas empresas, mesmo que de áreas avessas à tecnologia. Mas muito cuidado para não se confundir: Dados não são informações! É com os dados que se obtêm informações! Mas o que são dados, então? E informação? Vamos começar a responder essas perguntas agora mesmo, pois apesar de dados não serem informações, há uma ligação bastante forte entre eles.
+
+Os dados, sozinhos, não possuem relevância significativa, mas são a base das informações, ou seja, dados são como diamantes não lapidados, pedras brutas que precisam, juntos, serem interpretados para se transformar em informações. Vamos à um exemplo real para entender melhor isso.
+
+A concessionária fictícia de veículos XPTO venderá carros usados, apenas. Para seus clientes, dados brutos não são relevantes, mas sim a informação de cada carro e, ainda mais, informações juntas. Digamos que um cliente quer um veículo da marca XYZ com, no máximo, 20.000 (vinte mil) quilômetros, tenha tido apenas um dono e seja verde. Somente isso. Essas são as características que este cliente quer, minimamente, em seu veículo novo. A concessionária possui dados de muitos veículos e eles estão separados. A quilometragem, o fabricante, o modelo, a cor, o ano, quantos donos o veículo teve anteriormente, a placa, e muitos outros dados que, sozinhos, não fazem sentido, mas juntos, formam a caraterização de um veículo que pode ser escolhido através de vários critérios. Legal né?!
+
+Digamos agora que o dono dessa concessionária quer saber, por qualquer motivo, quantos carros verdes foram vendidos naquele mês. Ele precisará de um sistema de informação que seja capaz de aglutinar todos os dados de vendas concretizadas, filtrar a característica específica e gerar a informação da forma como ele deseja. É aí que entram os sistemas de informação que utilizam os bancos de dados.
+
+Então a informação é nada mais do que a organização dos dados de forma a gerar algo relevante e útil para quem precisa dessa informação.
+
+Podemos, também, pensar em nível de abstração dos dados até a informação e, até mesmo depois disso, que é o conhecimento.
+
+Os dados são itens totalmente abstratos, enquanto a informação já possui um nível de abstração menor e, finalmente o conhecimento, um nível de abstração baixíssimo. A imagem (figura 1) abaixo ajuda a ilustrar este pensamento. Podemos dizer que o dado é o nível mais baixo da abstração da informação.
+
+
+
+
+Agora incluímos um termo novo que não havia sido comentado antes: Conhecimento. O que é conhecimento? Bom, com a reunião de várias informações temos como resultado o conhecimento que é, normalmente, inerente aos seres humanos. Os sistemas são capazes de nos fornecerem informações, mas a construção do conhecimento é exclusividade de uma mente racional. Profundo, não? Fique despreocupado pois logo isso fará muito mais sentido, especialmente quando começarmos a colocar a “mão na massa” nos bancos de dados.
+
+SISTEMAS BASEADOS EM ARQUIVOS
+
+Iniciamos essa sessão falando dos sistemas baseados em arquivos, por um motivo: são os antecessores dos bancos de dados. Antes de iniciarmos essa discussão, temos que lembrar o que é um arquivo. Segundo o bom e velho amigo, o dicionário, um arquivo é a “reunião dos dados de um computador que, com registro individual e organizados sob um formato específico, contém textos, tabelas, imagens, sons etc.”. Resumindo, podemos dizer, então, que arquivos são estruturas específicas de armazenamentos de dados.
+
+Os sistemas de arquivos existem desde os primórdios da computação, ou seja, desde 1950. A computação evoluiu muito desde essa década, entretanto, os sistemas de arquivos apenas ficaram mais modernos e ganharam mais recursos, mas as características de um arquivo permanecem.
+
+Outro ponto importante é o meio onde estes arquivos ficam armazenados: Discos rígidos (HDs), CDs, disquetes, fitas magnéticas, pendrives, cartões perfurados etc., o fato é que o sistema de armazenamento de arquivos, embora tenham evoluído muito com o tempo, servem para armazenar estes dados e, qualquer falha nesses mecanismos pode causar a perda de todos os dados.
+
+Outro ponto crucial que motivou a existência dos bancos de dados é que cada software possui um formato específico de arquivo, obrigando o usuário a ter aquele software para poder ler ou gravar em um determinado formato.
+
+Isso não quer dizer que os arquivos não possam ser utilizados para armazenar dados. Na verdade, são, e isso é realmente uma prática muito comum. Inúmeras pessoas e empresas usam, por exemplo, planilhas de softwares licenciados para armazenar informações importantes (sensíveis), como mostrado na figura 2, num breve exemplo.
+
+
+
+
+Figura 2 - Planilha guardando dados
+
+O problema é que apesar de ser muito eficientes para armazenar dados simples e um pequeno volume de dados, quando as necessidades de armazenamento começam a ficar mais complexas, estes sistemas não dão conta e, por isso, recorremos à sistemas de informação, onde os dados são guardados e gerenciados pelo próprio sistema, mas vamos estudar isso em breve. Além disso, há muitas outras desvantagens em utilizar os sistemas de arquivos para armazenamento de dados, como:
+
+●     Inconsistência e redundância de dados: Aplicações evoluem com o tempo e há formatos demais, gerando, muitas vezes, repetição de dados
+
+●     Dificuldade de acesso aos dados: Os dados nos arquivos normalmente só podem ser acessados de uma forma e, às vezes, isso pode atrasar o acesso à informação
+
+●     Isolamento dos dados: Muitas vezes o compartilhamento de dados pode ser dificultado pois nem sempre quem os recebe possui o mesmo software (e/ou versão) para acessar.
+
+●     Falta de integridade: Realizar buscas de dados em arquivos pode resultar em dados duplicados ou ignorados, devido ao formato de como são gerados ou guardados.
+
+●     Falta de atomicidade: Nem sempre existem mecanismos de tratamento de erros (causados por qualquer motivo) em arquivos e os dados podem ser perdidos.
+
+●     Falta de segurança: Muitas vezes a proteção dos arquivos é responsabilidade do sistema operacional e, muitas vezes, dados sensíveis são rapidamente acessados.
+
+E, por isso, usamos bancos de dados, cujas principais características serão apresentadas a seguir.
+
+BANCOS DE DADOS
+
+Como vimos, os sistemas baseados em arquivos são ótimas soluções para resolver o problema de armazenamento de dados menos complexos, mas quando o grau de dificuldade aumenta, temos de utilizar sistemas específicos para gerir nossas informações e é aí que entram os bancos de dados. Mas o que são? Para que devemos usar? Para que servem? E para que não servem? Essas são questões que responderemos a seguir.
+
+Na década de 60 a IBM percebeu que os sistemas de arquivos tinham muitos problemas e começou a desenvolver pesquisas de como solucioná-los. Mas foi somente em 1970 que Edgar Todd, um importante pesquisador da IBM publicou um artigo intitulado “A Relational Model of Data for Large Shared Data Banks” (Um modelo relacional de dados para grandes bancos de dados compartilhados). Neste artigo, Todd apresenta um modelo que se tornou, mais tarde, o princípio mais importante dos bancos de dados. Foi somente na década de 1980 que a IBM então lançou seus primeiros projetos comerciais de bancos de dados. Já no início do século XXI, com o “estouro” da internet, os bancos de dados e sistemas começaram a ganhar cada vez mais espaço no mercado (inclusive de entretenimento como o de jogos) e novos fabricantes começaram a surgir, com propostas das mais diversas.
+
+A ideia dos bancos de dados é justamente suprir os problemas dos sistemas baseados em arquivos, garantindo itens como integridade dos dados, segurança no acesso aos dados, atomicidade, independência da linguagem de programação, concentração no armazenamento e desempenho. Mas lembre-se que os bancos de dados servem para armazenar dados e não conhecimento. O conhecimento, aqui, é extraído do conjunto de dados.
+
+Os bancos de dados são tão importantes que precisam de uma disciplina inteira só para eles, o que não quer dizer que são mais fáceis de trabalhar do que sistemas de arquivos ou mais baratos. Muito pelo contrário, é preciso entender bem a arquitetura de um banco de dados e eles nem sempre são gratuitos. Na verdade, normalmente são caros.
+
+BANCOS DE DADOS – PRINCIPAIS CARACTERÍSTICAS
+
+Bom, um sistema de banco de dados (comumente chamado de database ou base de dados) é nada mais do que um grande software capaz de armazenar dados, de forma organizada. Estes dados podem ser acessados por qualquer programa que utiliza nosso banco e são armazenados numa estrutura específica, que chamamos de tabelas.
+
+Tabelas são nada mais do que estruturas com linhas e colunas. As linhas armazenam os dados, enquanto as colunas servem para “categorizar” aquele dado. Um exemplo com dados arbitrários, neste caso, torna mais fácil o entendimento deste importante conceito:
+
+
+
+
+Note, neste simples exemplo, que os dados dos carros estão armazenados em uma linha, mas cada coluna representa um tipo de dados diferente para este carro. Os dados ficam no cruzamento das linhas e colunas, ou seja, se você quiser saber o modelo do carro cuja placa é “ABC-1234”, basta cruzar esta linha com a coluna “Modelo” e, neste caso, obter o dado “A8”.
+
+No mundo dos bancos de dados, chamamos as tabelas de entidade e as colunas de atributos, mas isso é um assunto que exploraremos bastante na próxima aula.
+
+Atividade extra
+
+Nome da atividade: Leia o texto complementar sobre “Dado X Informação X Conhecimento” disponível em:
+
+Link para a atividade: https://moodle.ufsc.br/pluginfile.php/1867820/mod_resource/content/1/FOUCAULT%2C%20Michel%20-%20A%20ordem%20do%20discurso.pdf
+
+
+Referência Bibliográfica
+DATE, C. J. Introdução a sistemas de banco de dados. Rio de Janeiro. Ed. Campus, 1991.
+
+CHEN, Peter. Modelagem de dados: a abordagem entidade-relacionamento para projeto lógico. São Paulo: Makron Books, 1990.
+
+MEDEIROS, L. F., Banco de dados, princípios e práticas, 1ª. ed., Ed. Intersaberes, 2013
+
+PUGA, S., França E., GOYA M., Banco de dados: Implementação em SQL, PL/SQL e Oracle 11g, Ed. Pearson, 2013
+
+ELMASRI R., NAVATHE, S., Sistemas de Banco de Dados, 4ªed., Ed. Pearson, 2005
+
