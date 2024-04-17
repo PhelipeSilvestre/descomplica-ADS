@@ -1,0 +1,27 @@
+Um controlador em Spring Boot é uma classe Java que lida com as solicitações HTTP, processando-as e fornecendo uma resposta apropriada. Os controladores são uma parte essencial de uma aplicação Spring Boot baseada em arquitetura MVC (Model-View-Controller). Eles são responsáveis por receber as requisições dos clientes, chamar a lógica de negócios apropriada e retornar uma resposta ao cliente.
+
+Aqui está um exemplo básico de um controlador em Spring Boot:
+
+java
+Copy code
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HelloController {
+
+    @GetMapping("/hello")
+    public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
+        return "Hello, " + name + "!";
+    }
+}
+Neste exemplo:
+
+A anotação @RestController marca a classe HelloController como um controlador Spring Boot.
+O método hello() é mapeado para a rota /hello e é chamado sempre que uma requisição GET é feita para essa rota.
+O parâmetro name é um parâmetro de consulta que pode ser passado na requisição. Se nenhum valor for passado, o valor padrão "World" será utilizado.
+O método retorna uma saudação com o nome fornecido na requisição.
+Quando uma requisição GET é feita para /hello, o controlador HelloController processa a requisição, chama o método hello() e retorna uma resposta ao cliente.
+
+Controladores em Spring Boot são extremamente flexíveis e podem lidar com diferentes tipos de solicitações HTTP, responder com diferentes tipos de dados (como HTML, JSON, XML, etc.) e integrar-se facilmente com outras partes da aplicação, como serviços e repositórios de dados. Eles desempenham um papel crucial na criação de APIs RESTful e aplicativos da web em geral usando o ecossistema Spring.
