@@ -1,0 +1,114 @@
+
+Introdução ao Projeto de Banco de Dados
+
+O conceito de projeto será apresentado nesta aula, além das principais fases de um projeto de bancos de dados e a importância de cada uma. 
+
+
+CONCEITO DE PROJETO
+
+Para este assunto, precisamos definir o que é “projeto” e nada melhor do que usar o guia mais completo e importante sobre o assunto, o famoso “PMBOK”, que em sua primeira página define projeto como “um esforço temporário empreendido para criar um produto, serviço ou resultado exclusivo” (PMBOK, 2017).
+
+O PMBOK define, ainda, que todo projeto normalmente é dividido em fases e essas fases devem ser muito bem definidas, ou seja, cada fase de cada projeto deve ter um início, uma execução e uma finalização. Independentemente do modelo de gestão de projetos utilizado, normalmente os projetos são divididos em quatro grandes fases
+
+INICIAÇÃO - PLANEJAMENTO - EXECUÇÃO - ENCERRAMENTO 
+
+Lembre-se que qualquer projeto, até mesmo de um jogo, pode ser dividido nestas fases e essencialmente as fases definem o que acontece na linha do tempo do projeto.
+
+
+INICIAÇÃO
+Na fase de iniciação são definidos os objetivos do projeto (o que será criado), as justificativas (porque ele faz e porque este projeto deve ser realizado), a descrição do time, ou seja, quem é quem no projeto, a identificação dos stakeholders (partes interessadas do projeto) e a definição das características deste projeto. Aqui, normalmente são gerados inúmeros documentos, comumente chamados de artefatos, que explicam para todos os interessados o que realmente o projeto faz, para que ele realmente serve. Aqui também é definido de forma superficial um cronograma, quais são as entregas, como cada entrega deve ser aceita, além das expectativas de custos.    
+
+PLANEJAMENTO
+Na fase de planejamento os detalhes são descritos e é onde também são levantados os recursos para a concepção do projeto, comprados equipamentos necessários para seu desenvolvimento (se é o caso), são feitos os planejamentos detalhados dos custos e das atividades. Podemos ver essa fase como um detalhamento da fase inicial, ou seja, define-se o que se quer realizar com o projeto na primeira fase e, na segunda, detalha-se tudo para que o projeto “saia do papel”.
+
+EXECUÇÃO
+Já a fase de execução é, literalmente, a concepção do projeto, ou seja, onde ele começa a ganhar vida e ser criado, colocado em prática. Aqui o projeto deve ser constantemente monitorado para que todo o planejamento das fases anteriores seja devidamente atendido e sejam aplicadas todas as correções necessárias para isso. Lembre-se que nos processos modernos de gestão de projetos, podem aqui ser realizadas entregas parciais do projeto ao cliente, ou seja, o sistema ou o jogo ou o serviço pode ser entregue em pequenas fases, com várias entregas até que todo o planejado seja entregue finalmente.
+
+ENCERRAMENTO
+Finalmente, na fase de encerramento o projeto é entregue e todo o planejamento inicial é validado e o projeto é encerrado por definitivo. Normalmente gera-se, também, um documento que pode ser muito útil para projetos futuros, onde são mostrados os erros do projeto e como cada um foi tratado. Nessa fase também são encerrados os contratos e o projeto é arquivado.
+
+PROJETO DE BANCOS DE DADOS
+
+Uma vez entendido o conceito de projeto de forma generalista, podemos incluir agora questões mais detalhadas sobre o projeto do banco de dados. Assim como qualquer projeto, os bancos de dados também precisam de um processo bem definido para implementação.
+
+O projeto do banco de dados inicia-se, normalmente, já na fase de planejamento do projeto principal, ou seja, junto com o planejamento do produto ou serviço final. Normalmente dividimos as fases do projeto do banco de dados em quatro grandes etapas.
+
+Mundo Real(Minimundo) - Estrutura ou local para qual o projeto será destinado
+- Análise de requisitos
+- Modelo conceitual
+- Modelo logico
+- Modelo fisico
+
+O mundo real, descrito nessas fases é essencialmente o mundo o qual o projeto está inserido, ou seja, o nosso “minimundo” (comumente chamado por diversos autores) de onde projeto será descrito. Muitas vezes esse “minimundo” é o contexto completo de nosso cliente ou o roteiro de um jogo e, até mesmo, detalhes de um site qualquer. Por exemplo, para o projeto de um sistema acadêmico o “minimundo” é composto por alunos, curso, disciplinas, professores, coordenadores e o papel de cada um destes no todo modelado. É do “minimundo” que realizamos a análise precisa de requisitos.
+
+ANÁLISE DE REQUISITOS
+
+O primeiro passo do projeto de bancos de dados é entender todas as necessidades. Isso se chama Análise de Requisitos. É comum dizermos que nessa fase descrevemos tudo que o sistema precisa fazer. É muito comum o uso de uma lista bastante extensa para representar os requisitos de nosso sistema. Normalmente essa lista é extraída do entendimento do sistema, do roteiro do jogo, dos artefatos da fase inicial do projeto ou qualquer outra fonte de conhecimento sobre o sistema.
+
+Antes de mais nada é preciso levantar os requisitos que dão a ideia inicial do sistema. Mas o que é um requisito? É a lista de tudo que o sistema alvo deve ter ou fazer, ou seja, quais são as entidades, como elas se relacionam, quais as regras de negócio etc.
+
+Nessa fase usamos diversas técnicas importantes, como por exemplo, entrevistas e muitas reuniões para entendermos os processos que realmente serão controlados por esse sistema, mesmo que um jogo! Não podemos esquecer que o sucesso das próximas etapas certamente dependerá do entendimento claro dessas necessidades e do levantamento dos requisitos. As técnicas de extração e categorização de requisitos serão abordadas numa aula específica para este fim.
+
+MODELO CONCEITUAL
+
+O modelo conceitual é a fase que sucede o levantamento de requisitos e é, sem dúvida a segunda fase mais importante em um projeto de banco de dados, pois aqui serão representadas todas as entidades (tabelas) e seus respectivos atributos. Algo importante sobre o modelo conceitual é que aqui não se depende de nenhuma tecnologia para modelagem, a não ser, claro, das ferramentas de modelagem, mas não importa, aqui, qual banco de dados será utilizado, quais serão as regras de segurança etc. Pode-se dizer que essa fase é independente de qualquer tecnologia, assim como quaisquer tecnologias escolhidas não podem afetar essa fase.
+
+Nessa fase todas as informações do levantamento de requisitos vão servir de base para desenho conceitual que é um mecanismo poderosíssimo de comunicação entre equipes das mais diversas.
+
+Aqui usamos normalmente um modelo muito famoso, chamado entidade-relacionamento (o famoso MER). É neste modelo onde se define quais são as entidades (tabelas) e como elas irão se relacionar umas com as outras, o grau de relação etc.
+
+Esse relacionamento possui uma cardinalidade (palavra chave aqui) entre as entidades. Nós vamos estudar isso em detalhes, mas de forma resumida é a grau de relação mínima e máxima entre cada uma das entidades. Por exemplo, em um sistema acadêmico, onde temos as entidades “curso” e “disciplina”. Sabemos que um curso deve possuir ao menos UMA disciplina e, no máximo, várias disciplinas, certo? E a disciplina? Bom, ela pode estar em pelo menos um curso e, num modelo convencional, ela só pode estar em um curso, ou seja, a cardinalidade máxima da disciplina em relação ao curso, também é de 1, ou seja, uma disciplina está em um curso, somente. Este é apenas um modelo hipotético. Os domínios de modelagem variam, mesmo em contextos similares. É por isso que o levantamento de requisitos é tão importante para essa fase, pois sem ele não saberemos o grau de relação entre as entidades.
+
+Se houver uma falha no levantamento de requisitos, certamente haverá falhas neste modelo e, claro, nos demais que derivarão deste.
+
+MODELO LÓGICO
+
+O modelo lógico é um refinamento do modelo conceitual, ou seja, é uma derivação que extraímos do modelo conceitual, porém de forma mais detalhada e, agora sim, voltada para a tecnologia de banco de dados escolhida. Aqui serão definidos os aspectos lógicos do banco de dados.
+
+Sabemos que cada entidade pode se tornar uma tabela (quando tratarmos da modelagem de dados essa transição entre entidade e tabela ficará bem mais clara, mas aqui assumimos que cada entidade é, de fato, uma tabela) e essa tabela armazenará dados.
+
+É nessa fase que nós definimos os tipos de dados e tamanho máximo deles. Por exemplo, no mesmo contexto acadêmico discutido anteriormente, temos que um aluno por ter, por exemplo, os seguintes atributos (já com aspectos lógicos):
+
+ Nome: texto (120 caracteres)
+ Número de matrícula: Número inteiro de até 10 dígitos
+ Data de nascimento: Data
+
+E quaisquer outros atributos pertinentes ao aluno neste contexto. E o curso? Bom o curso poderá ter, por exemplo:
+
+Nome do curso: texto (50 caracteres)
+Tipo de curso: texto (30 caracteres)
+
+Repare que aqui já estamos tratando dos tipos de dados que se tornarão regras para a implementação do banco de dados. É preciso termos em mente que o modelo lógico também gera um documento muito mais próximo a como o nosso projeto de banco de dados irá realmente ficar, pois são representadas as tabelas, seus atributos (que são as colunas), o tipo de cada campo (texto, número, data etc.) e seu tamanho, claro,  e a ligação com as demais entidades. Aqui também já são definidas as chaves primárias, chaves estrangerias entre outros itens muito importantes para o modelo físico, além das tabelas específicas para relacionamento de entidades. Vamos ver em detalhes este modelo em breve. O importante, aqui, é saber que este modelo é derivado do conceitual e apresenta um grau de precisão maior.
+
+MODELO FÍSICO
+
+Chegamos finalmente no modelo físico de um projeto de banco de dados. Apesar de ser a última fase, não se pode relaxar aqui. Essa fase é tão importante quanto as demais. Aqui, com o modelo lógico em mãos já temos uma ideia de como nosso banco de dados realmente ficará.
+
+Uma observação importante. Apesar de chamar-se modelo físico, não teremos nada tátil, ou seja, esta fase não gera nada que pegamos ou tocamos efetivamente, mas sim implementa nosso modelo em um sistema de banco de dados, ou seja, essa fase é totalmente dependente da tecnologia que utilizamos para implementar nosso banco de dados. Vamos discutir tecnologias de bancos de dados em breve.
+
+Vamos definir aqui, também, como será o armazenamento dos dados, ou seja, vamos gerar todos os scripts necessários (parte da programação) do banco: Scripts de tabelas, views, procedures (que são procedimentos), usuários etc. Muitas vezes até criamos dados aleatórios para serem utilizados pela aplicação que usa nosso banco de dados num ambiente de testes.
+
+Um ponto importante aqui é que é preciso definir qual sistema de banco e dados será utilizado (SQL Server, Oracle, MySQL etc). Não nos faltarão alternativas das mais diversas disponíveis no mercado. 
+
+Um ponto importante é que aqui também são definidas as regras de segurança de nosso banco de dados, usuários, permissões, papeis de cada usuário, como cada um acessa o sistema etc.
+
+
+
+
+
+
+Atividade Extra: 
+
+Para gestão de projetos existem uma série de certificações que uma pessoa pode tirar. A certificação é uma prova onde os principais conceitos daquele assunto são cobrados e, ao atingir-se uma determinada pontuação, ela é obtida. Pesquise um pouco mais sobre as principais certificações de gestão de projetos disponíveis, especialmente em https://www.pmi.org/brasil. Utilize outras fontes de pesquisa também.
+
+ 
+
+ 
+
+Referência Bibliográfica
+
+DATE, C. J. Introdução a sistemas de banco de dados. Rio de Janeiro. Ed. Campus, 1991.
+CHEN, Peter. Modelagem de dados: a abordagem entidade-relacionamento para projeto lógico. São Paulo: Makron Books, 1990.
+MEDEIROS, L. F., Banco de dados, princípios e práticas, 1ª. ed., Ed. Intersaberes, 2013
+PUGA, S., França E., GOYA M., Banco de dados: Implementação em SQL, PL/SQL e Oracle 11g, Ed. Pearson, 2013
+ELMASRI R., NAVATHE, S., Sistemas de Banco de Dados, 4ªed., Ed. Pearson, 2005

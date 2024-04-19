@@ -1,0 +1,22 @@
+
+Pensar & Responder
+
+​Você foi chamado para fazer o projeto de banco de dados do sistema de estoque de uma loja de roupas. Embora ainda não saibamos como montar a modelagem conceitual e lógica, descreva um texto livremente que poderia ser utilizado para análise do domínio do contexto. Se necessário, pesquise um pouco na internet sobre sistemas de controle de estoques.
+
+Projeto - Banco de dados 
+
+Seguimento: Loja de roupas
+
+Analise de requisitos
+Apos a analise dos requisitos foi identificado que o banco de dados deve permitir cadastrar fornecedores e clientes, controlar vendas e compras, cadastro de funcionarios, cadastro de produtos, inventario do estoque e um sistema de deposito.
+
+Modelo conceitual
+Nessa etapa será avaliado as entidades e como se relacionam. Por exemplo um produto cadastrado deve ter relação com a entidade controlar vendas e controlar compras. Assim como tambem pode ter relação com a entidade cliente. Etc.
+
+Modelo logico
+Aqui definimos as tecnologia que iremos utilizar e montaremos um modelo elaborado com todas as relações das nossas entidades ja usando a tecnologia escolhida. Com isso é possivel uma analise mais complexa do projeto.
+
+Modelo fisico
+Na fase final do projeto, os programadores poderão desenvolver o banco de dados por completo, realizar teste em ambientes controlados e acertar possiveis falhas que possam ter acontecido no decorrer do projeto.
+
+Com isso o projeto podera ser entregue.
