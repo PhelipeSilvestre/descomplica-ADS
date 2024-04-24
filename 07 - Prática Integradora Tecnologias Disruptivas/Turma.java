@@ -5,63 +5,62 @@ import java.util.Date;
 @Entity
 @Table(name = "instrutor")
 public class Instrutor {
-    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_instrutor")
-    private int idInstrutor;
-    
+    private Integer idInstrutor; 
+
+    // Atributos
     @Column(name = "RG")
-    private int rg;
-    
+    private Integer rg;
+
     @Column(name = "nome")
     private String nome;
-    
+
     @Column(name = "nascimento")
     private Date nascimento;
-    
-    @Column(name = "titulacao")
-    private int titulacao;
 
-    // Getters and setters
+    @Column(name = "titulacao")
+    private Integer titulacao;
+
+    // Relacionamento 1 para varios
+    @OneToMany(mappedBy = "instrutor")
+    private Set<Turma> turma;    
     
-    public int getIdInstrutor() {
+    // Getters and setters
+
+    public int getidInstrutor(){
         return idInstrutor;
     }
-
-    public void setIdInstrutor(int idInstrutor) {
+    public void setidInstrutor(int idInstrutor){
         this.idInstrutor = idInstrutor;
     }
 
-    public int getRg() {
+    public int getRg(){
         return rg;
     }
-
-    public void setRg(int rg) {
+    public void setRg(int rg){
         this.rg = rg;
     }
 
-    public String getNome() {
+    public String getNome(){
         return nome;
     }
-
-    public void setNome(String nome) {
+    public void setNome(String nome){
         this.nome = nome;
     }
 
     public Date getNascimento() {
         return nascimento;
     }
-
-    public void setNascimento(Date nascimento) {
+    public void setNascimento(Date nascimento){
         this.nascimento = nascimento;
     }
 
-    public int getTitulacao() {
+    public int getTitulacao(){
         return titulacao;
     }
-
-    public void setTitulacao(int titulacao) {
+    public void setTitulacao(int titulacao){
         this.titulacao = titulacao;
     }
 }
@@ -69,75 +68,64 @@ public class Instrutor {
 @Entity
 @Table(name = "turma")
 public class Turma {
-    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_turma")
-    private int idTurma;
-    
+    private Integer idTurma;
+
+    // Atributos
     @Column(name = "horario")
     private Time horario;
-    
+
     @Column(name = "duracao")
-    private int duracao;
-    
+    private Integer duracao;
+
     @Column(name = "dataInicio")
     private Date dataInicio;
-    
+
     @Column(name = "dataFim")
     private Date dataFim;
 
+    // Relacionamento varios para 1
     @ManyToOne
-    @JoinColumn(name = "id_instrutor")
-    private Instrutor instrutor;
+    @JoinColumn(name = "id_instrutor",
+        referencedColumnName = "id")
+    private Instrutor instrutor;    
 
-    // Getters and setters
-    
-    public int getIdTurma() {
+    // Getters and Setters
+
+    public int getIdTurma(){
         return idTurma;
     }
-
-    public void setIdTurma(int idTurma) {
+    public void setIdTurma(int idTurma){
         this.idTurma = idTurma;
     }
 
-    public Time getHorario() {
+    public Time getHorario(){
         return horario;
     }
-
-    public void setHorario(Time horario) {
+    public void setHorario(Time horario){
         this.horario = horario;
     }
 
-    public int getDuracao() {
+    public int getDuracao(){
         return duracao;
     }
-
-    public void setDuracao(int duracao) {
+    public void setDuracao(int duracao){
         this.duracao = duracao;
     }
 
-    public Date getDataInicio() {
+    public Date getDataInicio(){
         return dataInicio;
     }
-
-    public void setDataInicio(Date dataInicio) {
+    public void setDataInicio(Date dataInicio){
         this.dataInicio = dataInicio;
     }
 
-    public Date getDataFim() {
+    public Date getDataFim(){
         return dataFim;
     }
-
-    public void setDataFim(Date dataFim) {
+    public void setDataFim(Date dataFim){
         this.dataFim = dataFim;
-    }
-
-    public Instrutor getInstrutor() {
-        return instrutor;
-    }
-
-    public void setInstrutor(Instrutor instrutor) {
-        this.instrutor = instrutor;
     }
 }
