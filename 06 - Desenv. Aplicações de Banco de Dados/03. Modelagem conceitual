@@ -1,0 +1,129 @@
+
+Modelagem Conceitual
+
+A modelagem conceitual é uma importante fase do projeto de banco de dados e modelar corretamente pode influenciar diretamente na qualidade. É preciso entender bem o conceito além de aprender como modelar corretamente um contexto. 
+
+Uma das fases do projeto de um banco de dados é a modelagem conceitual, que ocorre logo em seguida após o levantamento de requisitos. Essa fase é de importância ímpar para o projeto pois poderá influenciar diretamente a qualidade do projeto final.
+
+O modelo conceitual foi proposto por Peter Chen em 1976, mas sofreu muitas atualizações ao longo do tempo. Não é incomum encontrar uma modelagem diferente da que aprenderemos aqui, o importante é entender os conceitos de que cada símbolo representa. Lembre-se, também, que essa fase de modelagem é totalmente independente da tecnologia, ou seja, não importa qual banco de dados será utilizado no projeto, mas sim as entidades, atributos e relacionamentos em questão.
+
+Essa fase gera um artefato (documento) para o projeto que é o diagrama entidade-relacionamento e gerar este diagrama corretamente é uma tarefa importante desta etapa do projeto. Entretanto, antes de conhecer a simbologia específica para isso, é preciso relembrar alguns conceitos importantes.
+
+Essa modelagem baseia-se em entidades, seus atributos e como cada entidade relaciona-se com as demais. Podemos considerar que as entidades se tornarão tabelas nos modelos que derivam desta fase (modelagem lógica e física). Pode-se, ainda, observar entidades como os objetos do “mundo real”, ou seja, os objetos que são importantes para o sistema que esteamos construindo. Não se esqueça que as entidades devem ser distintas, ou seja, não podem se repetir no universo modelado.
+
+Já os atributos são as características relevantes que nossas entidades podem ter. Por exemplo, num sistema de bibliotecas, o livro pode possuir atributos como “título”, “resumo”, “ISBN”, “autor(es)”, “localização na biblioteca”, etc. Já o mesmo livro, numa loja tem, além destes atributos, o “preço”. Por isso o contexto é muito importante, pois os atributos são apenas os que fazem sentido para tal.
+
+Os comportamentos dos objetos (os métodos) não são tão importantes para o mundo do banco de dados, embora eles possam influenciar diretamente como cada objeto se relaciona com os demais. Por exemplo, se um livro pode ser emprestado num sistema de biblioteca, então sabemos que existe um relacionamento direto de livro com alguma entidade que o recebe, como por exemplo, “aluno” e este relacionamento possui uma série de características, como prazo de empréstimo, multa por atraso etc.
+
+Outro ponto importante aqui é que no modelo conceitual os atributos não possuem um tipo específico, ou seja, não importa se o atributo é do tipo texto ou número inteiro, além das características da segurança do banco de dados também não serem modeladas aqui.
+
+
+
+SIMBOLOGIA DA MODELAGEM CONCEITUAL
+
+Como apresentado anteriormente, essa fase do projeto do banco de dados resulta em uma modelagem conceitual completa do domínio da aplicação que está sendo desenvolvida. Com isso, é preciso aprender a simbologia específica para se representar cada item.
+
+As entidades devem ser modeladas com um retangulo com o nome do mesmo dentro. Note que apenas um retângulo com o nome da entidade ao centro basta para essa tarefa.
+
+​Agora os atributos devem ser modelados. Note que há dois tipos de atributos, um identificador e um comum. O identificador possui um circulo preenchido ou preto enquanto o comum é vazio ou branco. O atributo identificador e aquele cujos dados devem ser únicos (nunca se repetem) e nunca podem ser nulos (sem dados). Por exemplo: a placa de um carro, o CPF de uma pessoa, o ISBN de um livro etc. Já os atributos do tipo “comum” são aqueles que representam dados convencionais dessa entidade. Por exemplo o nome de uma pessoa (pode se repetir), o modelo de um carro etc. 
+
+​Ainda falta mais um símbolo importante, o de relacionamento, neste caso representado com um triangulo. Este símbolo ocorre entre duas entidades e denota que entre elas existe um grau de existência de uma em relação à outra. Por exemplo, um livro possui suas próprias características, assim como autor e podemos, portanto, ver estes como entidades distintas. De qualquer maneira, temos que relacionar um livro e um autor e, para isso, utilizamos este símbolo.
+
+Para ficar um pouco mais claro, vamos usar o mesmo exemplo do livro em relação autor. O livro, que possui suas próprias caraterísticas, está associado ao autor que, por sua vez, também possui suas próprias características. Entretanto, ainda falta uma coisa: O grau de relação, ou seja, quantos autores um livro pode ter? Quantos livros um autor pode ter? Isso chama-se cardinalidade e veremos a seguir.
+
+ENTIDADE: livro   -------------------------------------- ENTIDADE: Autor
+Atributo identificador: ISBN                             Atributo identificador: Id
+Atributos comuns: Titulo, Paginas, Ano, etc.             Atributos comuns: Nome, pais, idade
+
+
+
+CARDINALIDADE
+
+O termo cardinalidade Vem da matemática que representa o número de elementos em um determinado conjunto. Por exemplo, o conjunto X = {2, 4, 6, 8, 20}, então dizemos que a cardinalidade é 5, pois este é o número de elementos dentro deste conjunto.
+
+
+Na modelagem conceitual o conceito é o mesmo. Quantos elementos de uma entidade referem-se à outra entidade. Toda entidade que se relaciona com outra deve ter uma cardinalidade e, aqui, é representada em mínimo e máximo.
+
+
+Usando o mesmo exemplo para explicar, de livro, temos a relação de ambos os lados, ou seja, do lado do livro e do lado do autor, conforme:
+
+    O livro, para existir, precisa ter ao menos 1 autor e no máximo vários (indiferente) autores, ou seja, “N”.
+
+    O autor, para ser considerado autor de livro, deve ter pelo menos 1 livro e no máximo vários livros, ou seja, “N”.
+
+
+Isso quer dizer que estamos falando de uma relação “1 para N”, onde “N”, pode ser qualquer número inteiro natural. Lembre-se que na cardinalidade máxima não expressamos um número diferente de 1 ou N.
+
+
+Para melhorar o entendimento, vamos a outro exemplo: Relação médico X paciente.
+
+    O médico pode ter vários pacientes;
+
+    Cada paciente pode ter vários médicos.
+
+
+A cardinalidade na modelagem conceitual deve ser representada com um parêntese, a cardinalidade mínima, uma “vírgula”, a cardinalidade máxima e o parêntese de fechamento.
+
+    "cardinalidade minima --->" (X, Y) "<---- cardinalidade maxima"
+
+
+A cardinalidade mínima pode ser 0 (zero) ou 1 (um), enquanto a cardinalidade máxima pode ser 1 (um) ou N (“ene”), portanto as possibilidades são:
+
+    (0, 1) à Indica que a entidade pode ter nenhum ou apenas um de outra
+    
+    (0, n) àIndica que a entidade pode ter nenhum ou vários (mais de 1) de outra
+    
+    (1, 1) à Indica que a entidade precisa ter ao menos um e não mais que isso
+    
+    (1, n) à Indica que a entidade precisa ter ao menos um e no máximo vários
+
+
+Para ilustrar melhor o conceito e como incluir este grau de relação entre as entidades na modelagem conceitual, vamos continuar explorando o exemplo do livro X autor, note que a cardinalidade ocorre de ambos os lados.
+
+
+A cardinalidade que está próxima ao Livro refere-se a do Autor em relação ao Livro e a que está ao lado do Autor refere-se à do Livro em relação ao Autor. Uma forma bastante usual de descobrir as cardinalidades é fazendo uma pergunta para a entidade e imaginando o que ela responderia: “Quantos você pode ter ao menos e no máximo da sua vizinha?”, por exemplo:
+
+    Livro, você precisa ter quantos autores, pelo menos? à  Um!
+
+    Livro, você pode ter até quantos autores? à Vários
+
+Do outro lado agora… 
+
+    Autor, você precisa ter ao menos quantos livros? à Um!
+
+    Autor, quantos livros você pode ter? à Vários
+
+
+Outro pequeno exemplo. Carro X Proprietário (chamado de pessoa aqui). Note que o carro pode ter no mínimo um proprietário e no máximo um proprietário, também. Por outro lado, a pessoa (proprietário), neste exemplo, pode não ter nenhum carro ou ter vários carros, nesse caso representado por “N”
+
+
+Apenas para exemplificar, vamos mostrar mais um modelo obtido de um cenário diferente. Vamos modelar um pequeno sistema de “livro de receitas”, descrito pelas seguintes características:
+
+    Cada receita é composta por um conjunto de ingredientes
+
+    Cada ingrediente, tem uma determinada quantidade e uma unidade de medida
+
+    As receitas possuem um nome, uma descrição o modo de preparo
+
+    As receitas também podem ter quantas pessoas ela serve
+
+
+Existem ainda outros símbolos para representar mais algumas coisas na modelagem conceitual, como os símbolos da especialização (herança) e da entidade associativa. Teremos uma aula específica para modelar um contexto completo onde estes novos conceitos serão introduzidos. Entender essa modelagem já é o suficiente para modelar praticamente qualquer cenário.
+
+
+
+
+Atividade extra
+
+Baixe e explore o aplicativo BRModelo (ou qualquer um de sua preferência para modelagem conceitual de dados). Você pode o encontrar neste site: https://sourceforge.net/projects/brmodelo/ e, o mais legal, é que ele não precisa de instalação, basta ter o Java instalado na máquina. Tente recriar os exercícios propostos nesta aula e implementar novas ideias. Não se esqueça das cardinalidades.
+ 
+
+ 
+
+Referência Bibliográfica
+
+DATE, C. J. Introdução a sistemas de banco de dados. Rio de Janeiro. Ed. Campus, 1991.
+CHEN, Peter. Modelagem de dados: a abordagem entidade-relacionamento para projeto lógico. São Paulo: Makron Books, 1990.
+MEDEIROS, L. F., Banco de dados, princípios e práticas, 1ª. ed., Ed. Intersaberes, 2013
+PUGA, S., França E., GOYA M., Banco de dados: Implementação em SQL, PL/SQL e Oracle 11g, Ed. Pearson, 2013
+ELMASRI R., NAVATHE, S., Sistemas de Banco de Dados, 4ªed., Ed. Pearson, 2005
