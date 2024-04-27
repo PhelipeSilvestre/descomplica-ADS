@@ -1,0 +1,49 @@
+
+Modelagem na prática
+
+Nesta aula será apresentado um contexto completo, a modelagem conceitual deste contexto e, finalmente a modelagem lógica completa deste contexto, para treinamos um pouquinho.
+
+
+DEFINIÇÃO DO ESCOPO
+
+Para praticar uma modelagem logica de algo real, um escopo (cenário completo) será definido e, para isso será utilizado o contexto de um jogo de corrida estilo fórmula 1, assim como fora feito na aula de modelagem conceitual, ou seja, faremos a modelagem lógica do mesmo contexto. Para isso, será reutilizada a descrição em forma de narrativa do jogo, ou seja, uma descrição de uma possível sequência de eventos que ilustram bem a ideia do jogo para que, em seguida, seja realizada a extração das entidades e seus respectivos atributos e depois a modelagem completa, com os relacionamentos e suas devidas cardinalidades e, finalmente, a modelagem lógica será devidamente apresentada a discutida. A descrição do jogo seguirá nos próximos parágrafos.
+
+Assim que o jogo é iniciado pela primeira vez, o jogador deve criar um perfil para ele. Este perfil tem um nome e um ícone que pode ser editado e escolhido por ele mesmo. O usuário é livre para escolher qualquer nome e deve escolher o ícone do perfil baseado nos ícones disponíveis.
+
+Ao selecionar o perfil, o jogador deve, pela primeira vez, escolher para qual equipe ele quer correr (por exemplo: Ferrari, Audi, McLaren, Mercedes, Williams, Renault, dentre muitas outras). Cada equipe tem um nome e um brasão e pertence à um país. Cada país pode ter várias equipes, naturalmente. Ao selecionar a equipe, o jogador deverá escolher com quem ele quer correr, ou seja, o piloto que o representará.
+
+O piloto é associado á uma única equipe e cada equipe pode ter vários pilotos. Cada piloto tem um nome, uma idade, um peso, uma imagem, um país de origem, e uma série de habilidades (velocidade, traçado, ultrapassagem, defesa, pilotagem em pista molhada etc.). Cada habilidade é dada por uma escala de 1 a 5. Ao selecionar o piloto, o jogador receberá automaticamente seu carro. Cada piloto tem apenas um carro. Os carros possuem características que podem ser personalizadas, como tipo de embreagem, pneus etc.
+
+Pronto, agora o jogador está pronto para ingressar em um campeonato. Cada campeonato possui um número de partidas. Cada partida ocorre em uma pista. Cada pista possui uma localização (país), um nome e um grau de dificuldade (de 1 a 5). Cada partida possui um número de voltas. Ganha a partida quem, na última volta, chegar em primeiro. Deve ser registrada nessa partida o ranking (classificação) de cada jogador. Ganha o campeonato quem chegar em primeiro lugar mais vezes.
+
+Neste jogo pode haver empates no campeonato, ou seja, podem existir dois jogadores que ganharam o mesmo número de partidas daquele campeonato. Lembre-se que o jogador que quiser correr uma partida de uma única pista, ele deverá ingressar, por exemplo, num campeonato do tipo “amistoso” e selecionar a pista, pois a pista pode estar em mais de um campeonato.
+
+Pronto. Escopo definido. Este parece ser um jogo muito empolgante, mas mais empolgante ainda, claro, será a modelagem completa dele. Vamos extrair agora as entidades e atributos. 
+
+
+
+MODELAGEM CONCEITUAL
+
+Conforme descrito anteriormente, a modelagem lógica será derivada da modelagem conceitual e, para isso, a modelagem conceitual deste contexto precisa ser apresentara, portanto. A modelagem em questão é a mesma da aula de modelagem conceitual e pode ser vista na figura 1. Essa modelagem foi criada no software chamado brModelo.
+
+Atente-se bastante para a modelagem acima pois desta será derivada a modelagem lógica. Leia e releia o texto que define o escopo várias vezes e comparte com cada entidade e analise suas respectivas cardinalidades.
+
+
+
+INSTALAÇÃO E USO DO ORACLE SQL DEVELOPER DATA MODELER
+
+Para realizar esta modelagem, será utilizado o software “Oracle SQL Developer Data Modeler” que pode ser baixado gratuitamente através do site da Oracle. Lembre-se que para baixar qualquer coisa do site da Oracle é preciso ter uma conta, que é gratuita e bastante simples de ser feita. O site deste sistema é https://www.oracle.com/br/database/technologies/appdev/datamodeler.html, mas se houver alguma mudança, desde a publicação desde material, você rapidamente conseguirá encontrar nos principais buscadores através do nome do aplicativo.
+
+Se você conseguiu executar o aplicativo brModelo sem nenhum problema, este você certamente conseguirá, também, pois assim como o brModelo, este pode ser executado diretamente. Basta escolher a versão correta de seu sistema operacional para baixa-lo.
+
+É muito importante mencionar que existe um software da Oracle chamado “Oracle SQL Developer”, apenas. Não confunda com o “Data Modeler”, pois apesar dos nomes serem parecidos, os softwares são para fins diferentes. O citado aqui serve para realizar conexões com bancos de dados Oracle e realizar as devidas manipulações, enquanto o que estamos utilizando para esta aula é exclusivo para modelagens.
+
+Ao abrir o software pela primeira vez você verá uma tela como a mostrada na figura 2. Note que, no painel de navegação do lado esquerdo há muitas opções e é muito fácil de se perder, pois este é um programa bastante completo, mas não se preocupe pois, com o tempo você dominará este software. O programa em si não requer nenhuma configuração inicial e pode ser utilizado logo ao ser executado.
+
+O software em si não é difícil de operar, embora seja bastante completo, ou seja, possui uma diversidade enorme de recursos. Explore bastante as demais funcionalidades, sem medo de estragar nada, e veja o impacto das mudanças nos modelos que você for criando.
+
+Agora, para adicionar os relacionamentos, você deve clicar no ícone das chaves, clicar na tabela que será relacionada e, em seguida, clicar na tabela que receberá a FK. A imagem da figura 7 ilustra este processo. O SQL Data Modelar irá mostrar um assistente onde você poderá configurar este relacionamento e, em seguida, ele irá automaticamente incluir a FK no local correto, com o nome correto. No exemplo desta imagem, foi clicado em “tabela_B” e, em seguida, “tabela_A”, então A recebeu a FK para B.
+
+
+
+MODELAGEM LÓGICA
