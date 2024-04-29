@@ -47,3 +47,35 @@ Agora, para adicionar os relacionamentos, você deve clicar no ícone das chaves
 
 
 MODELAGEM LÓGICA
+
+
+A modelagem lógica deste contexto pode ser vista na figura 8. Note que a modelagem é bastante ampla e tente entender como cada entidade foi gerada, seus atributos e, principalmente, suas chaves estrangeiras. Para essa modelagem foi necessário incluir um relacionamento entre o ranking e o piloto, para que a classificação do piloto seja registrada junto com a classificação da corrida e do perfil, o que não é mostrado na modelagem conceitual. Isso mostra que a modelagem lógica também pode ser usada para refinar o entendimento do contexto, ou seja, que se pode considerar o contexto para gerar relacionamentos não previstos na modelagem anterior. É muito importante observar que todas as entidades e atributos foram escritos com letras minúsculas, o que é um padrão da modelagem física já aplicada neste contexto.
+
+Uma característica importante deste modelo é que, embora o modelo conceitual expresse os atributos chave, foram criados identificadores únicos para cada tabela para representar um padrão que será imposto pela modelagem física, então estamos nos adiantando para essa transição.
+
+Note, também, que a tabela carro foi suprimida junto com a tabela de piloto, ou seja, elas foram juntadas. Isso ocorreu para o atendimento da cardinalidade obrigatória onde cada carro pertence a cada piloto e cada pilo possui apenas um carro, neste modelo. Conforme as regras de derivação, todo relacionamento (1,1) de ambos os lados gera uma aglutinação entre as tabelas, para evitar inconsistência com o modelo conceitual e, consequentemente, com as regras de negócio.
+
+Note, ainda, a linha pontilhada entre as tabelas “perfil” e “equipe”. Isso quer dizer que esse relacionamento é opcional, ou seja, a FK de equipe em perfil não é obrigatória, ou seja, o usuário pode criar um perfil e não selecionar nenhuma equipe. Claro que sabemos que isso fará com que ele não consiga participar de nenhum campeonato (regra de negócio), mas o cadastro do perfil não pode estar condicionado à existência da equipe, por isso esse enfraquecimento da relação entre essas tabelas.
+
+Pode-se observar, também, que as tabelas “campeonato” e “pista” são conectadas através de uma tabela de relacionamento que possui um id próprio para esta relação, que é utilizado no ranking. Isso ajuda a minimizar a quantidade de chaves estrangeiras na tabela de ranking pois uma única chave aponta para vários registros.
+
+Por fim, é muito importante lembrar que o modelo criado aqui, sendo este conceitual ou lógico, pode ter variações consideráveis e essa é apenas uma leitura deste contexto, ou seja, se você tentou modelar sozinho e obteve resultados  diferentes, eles não estão necessariamente errados, apenas colocados sobre uma ótica diferente.
+
+
+
+
+Atividade extra
+
+Tente realizar a modelagem lógica de um site de relacionamentos. Descreva você mesmo o modelo de utilização do site, ou seja, como cada usuário se cadastra e busca possíveis parceiros(as) etc. Para lhe ajudar a modelar, tente descrever como funcionaria um site como este. independentemente dos algoritmos de associação entre usuários.
+
+ 
+
+ 
+
+Referência Bibliográfica
+
+DATE, C. J. Introdução a sistemas de banco de dados. Rio de Janeiro. Ed. Campus, 1991.
+CHEN, Peter. Modelagem de dados: a abordagem entidade-relacionamento para projeto lógico. São Paulo: Makron Books, 1990.
+MEDEIROS, L. F., Banco de dados, princípios e práticas, 1ª. ed., Ed. Intersaberes, 2013
+PUGA, S., França E., GOYA M., Banco de dados: Implementação em SQL, PL/SQL e Oracle 11g, Ed. Pearson, 2013
+ELMASRI R., NAVATHE, S., Sistemas de Banco de Dados, 4ªed., Ed. Pearson, 2005
