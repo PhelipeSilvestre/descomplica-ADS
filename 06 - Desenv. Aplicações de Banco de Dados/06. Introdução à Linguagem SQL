@@ -576,3 +576,284 @@ Cuidados a serem tomados:
     Atribuição de valores que ultrpassem os limites da respectiva coluna é rejeitada. Para colunas do tipo VARCHAR, pode-se utilizar a função SUBSTR() para evitar erros.
 
 
+
+
+OPERADORES E FUNÇÕES SELECIONADOS
+
+A linguagem SQL oferece um conjunto de operadores aritméticos, lógicos, relacionais e de conjuntos que são muito úteis para seleção de registros de uma tabela.
+
+
+Operadores aritméticos
+
+Os operadores aritméticos são, em sua maioria, binários, isto é, possuem dois operandos. A exceção é o operador de troca de sinal (menos unário). Todas as funções aritméticas retornam o valor NULL em caso de erro.
+
+    Operadores:                                     Funções:
+    ______________________________                  ____________________________________________________ 
+    | Operador | Descrição       |                  | Funções       | Descrição                        |
+    |----------------------------|                  |--------------------------------------------------|
+    | +        | Soma            |                  | ABS(x)        | Valor absoluto de x              |
+    | -        | Subtração       |                  | EXP(x)        | Exponecial de x                  |
+    | -        | Troca de sinal  |                  | LN(x)         | Logaritmo natural de x           |
+    | *        | Multiplicação   |                  | POWER(x, y)   | Potencia                         |
+    | /        | Divisão real    |                  | ROUND(x, y)   | Arredonda x com y casas decimais |
+    | MOD ou % | Modulo(resto)   |                  | SQRT(x)       | Raiz quadrada de x               |
+    | DIV      | Divisão inteira |                  | TRUNCATE(x,y) | Trunca x com y casas decimais    |
+    |____________________________|                  |__________________________________________________|
+
+
+
+Operadores lógicos
+
+Os operadores lógicos são binários a exceção do não unário (NOT), retornando os valores TRUE, FALSE ou NULL, dependendo dos valores de seus operandos. Os operandos podem ser dos tipos lógico, numérico ou texto. Números diferentes de zero são tratados como TRUE e o valor 0, FALSE. Operandos do tipo texto são considerados sempre FALSE. A tabela-verdade a seguir resume o funcionamento dos operadores lógicos. Os operadores lógicos são: AND ou &&, OR ou ||, XOR e NOT ou !.
+
+
+
+Operadores relacionais
+
+Operadores relacionais comparam dois operandos retornando sempre TRUE, FALSE ou NULL. Como regra geral, se um dos operandos tem o valor NULL, o resultado é NULL.  Embora seja possível comparar operandos de tipos diferentes, o melhor a fazer é converter o valor de um dos operandos para o tipo do outro utilizando a função CAST().
+
+
+    ________________________________________________________________
+    | Operação              | Descrição                            |
+    |--------------------------------------------------------------|
+    | x = y                 | Retorna TRUE se x é igual a y        |
+    | x <> y ou x != y      | Retorna TRUE se x é difetente de y   |
+    | x > y                 | Retorna TRUE se x é maior que y      |
+    | x < y                 | Retorna TRUE se x é menor que y      |
+    | x >= y                | Retorna TRUE se x é maior ou igual y |
+    | x <= y                | Retorna TRUE se x é menor ou igual y |
+    | x BETWEEN a AND b     | Equivalante a (x >= a) AND (x <= b) |
+    | x NOT BETWEEN a AND b | Equivalente a NOT (x BETWEEN a AND b |
+    | x IS NULL             | Retorna TRUE se x é NULL             |
+    | x IS NOT NULL         | Equivalente a NOT (x IS NULL)        |    
+    |______________________________________________________________|
+
+
+
+Operadores de conjuntos
+
+Os operadores de conjunto verificam se um elemento pertence a um conjunto, retornando TRUE, FALSE ou NULL.
+
+
+    ___________________________________________________________________________________________
+    | Operação                | Descrição                                                     |
+    |-----------------------------------------------------------------------------------------|
+    | x IN (a, b, c, ...)     | Equivalente a (x = a) OR (x = b) OR (x = b) OR (x = c) OR ... |
+    | x NOT IN (a, b, c, ...) | Equivalente a NOT (x IN (a, b, c, ...))                       |
+    |_________________________________________________________________________________________|
+
+
+A precedência dos operadores é a seguinte: operadores unários (! e –), operadores aritméticos multiplicativos (*, /, DIV, %, MOD), operadores aritméticos aditivos (+ e –), operadores relacionais (=, <>, !=, <, >=, <=) e de conjunto (IN e NOT IN), operadores relacionais BETWEEN e NOT BETWEEN, operadores lógicos multiplicativos (AND e &&), operador lógico XOR, operadores lógicos aditivos (OR, ||). Expressões entre parênteses são executadas primeiro. Os operadores de um mesmo nível são executados da esquerda para a direita. Em caso de dúvida, coloque a expressão desejada entre de parênteses para forçar sua execução.
+    
+
+
+
+ALTERAÇÃO DE REGISTROS
+
+O comando UPDATE é utilizado para alterar o valor de campos de um registro. Diferentemente do INSERT, é necessário informar em que registro(s) a(s) alteração(ões) será (ão) feita(s). A cláusula WHERE é utilizada para este fim.
+
+    UPDATE nome_da_tabela
+        SET coluna1 = [valor1 | expressão1 | DEFAULT]  
+                  [,coluna2 = [valor2 | expressão2 | DEFAULT]  ] …
+        [WHERE condição];
+
+
+Este comando atribui novos valores a colunas de um registro existente. O valor atribuído pode ser uma constante, uma expressão (pode incluir colunas da tabela) ou o valor padrão para a coluna (DEFAULT). A cláusula SET indica que colunas modificar e com que valores. Se a cláusula WHERE for incluída, apenas o(s) registro(s) em que condição for verdadeira serão afetados. Caso contrário, todos os registros da tabela serão afetados. Condição pode ser simples, com apenas um termo, ou composta, com dois ou mais termos conectados pelos operadores AND, OR e NOT. Os termos de condição utilizam os operadores relacionais =, <> (diferente de), >, <, ≥ e ≤13. 
+
+Veja os exemplos abaixo. Considere o estado inicial da tabela lançamento conforme mostrado na Tabela 2.
+
+
+    UPDATE lancamento SET valor = 10000.44 WHERE num = 3;
+ 
+    UPDATE lancamento SET historico = DEFAULT WHERE (num = 1 OR num = 5);
+ 
+    UPDATE lancamento SET valor = valor / 2, conta_cred = 111111 WHERE num = 4;
+ 
+    UPDATE lancamento SET conta_debt = 999999 WHERE num = 10;
+
+
+O primeiro comando altera valor apenas em um registro (num = 3). O segundo altera dois registros (num = 1 e num = 5), atribuindo a histórico o seu valor padrão (‘’). O terceiro altera duas colunas do registro com num = 4, utilizando uma expressão para atribuir a valor metade de seu valor inicial e uma constante, atribuindo a conta_cred o valor 111111. Finalmente o último comando não altera qualquer registro de lançamento, pois nenhum deles atende às condições da cláusula WHERE. Após a execução dos quatro comandos, a tabela lançamento ficaria como mostrado na Tabela 3:
+
+Tabela 3: Registros em lançamento após a execução dos 4 comandos UPDATE
+
+
+    _______________________________________________________________________________________
+    | num | conta_cred | conta_debt | valor     | data         | historico                |
+    |-------------------------------------------------------------------------------------|
+    | 1   | 123456     | 654321     | 123456.89 | '2020-04-01' | 'Referente compra papel' |
+    | 2   | 123456     | 654321     | 123456.89 | '2020-04-01' | 'Referente compra papel' |
+    | 3   | 666666     | 222222     | 10000.44  | '2020-04-01' | ''                       |
+    | 4   | 111111     | 444444     | 50.00     | '2020-04'02' | 'Referente compra cafe'  |
+    | 5   | 555555     | 666666     | 200.00    | '2020-04-03' | 'Referente compra agua'  |
+    |_____________________________________________________________________________________|
+
+
+
+
+EXCLUSÃO DE REGISTROS
+
+O comando DELETE é utilizado para remover registros. Muito cuidado: a cláusula WHERE deve ser utilizada para selecionar os registros a serem excluídos ou todos os registros da tabela serão excluídos. A sintaxe mais comum de DELETE é simples:
+
+    DELETE FROM nome_da_tabela
+        [WHERE condição]
+
+Os exemplos a seguir ilustram o uso deste comando.
+
+    DELETE FROM lancamento WHERE conta_debt <> 654321 AND conta_cred = 123456;
+    DELETE FROM lancamento WHERE data < ‘2020-04-02’;
+
+
+O primeiro comando não exclui qualquer registro, pois não há registros que atendam à condição. O segundo exclui os três primeiros registros, pois todos atendem à condição. Após a execução dos dois comandos, a tabela lançamento ficaria como mostrado na Tabela 4:
+
+Tabela 4: Registros em lançamento após a execução dos 2 comandos DELETE
+
+    _______________________________________________________________________________________
+    | num | conta_cred | conta_debt | valor     | data         | historico                |
+    |-------------------------------------------------------------------------------------|
+    | 4   | 111111     | 444444     | 50.00     | '2020-04'02' | 'Referente compra cafe'  |
+    | 5   | 555555     | 666666     | 200.00    | '2020-04-03' | 'Referente compra agua'  |
+    |_____________________________________________________________________________________|
+
+
+
+
+
+INTEGRIDADE REFERENCIAL EM SQL
+
+A linguagem SQL fornece mecanismos que garantem a integridade referencial de um esquema relacional. Modificações ou exclusões de registros em tabelas referenciadas por chaves estrangeiras podem violar a integridade referencial do esquema. Duas cláusulas são utilizadas para definir, se desejado, as ações corretivas a serem tomadas. Estas cláusulas complementam a criação de chaves estrangeiras.
+
+
+    [CONSTRAINT [nome_chave]] FOREIGN KEY (coluna1, coluna2, …)
+ 
+        REFERENCES tabela_pai (coluna1, coluna2, …)
+ 
+        [ON DELETE RESTRICT | CASCADE | SET NULL | NO ACTION]
+ 
+        [ON UPDATE RESTRICT | CASCADE | SET NULL | NO ACTION];
+
+
+
+    1.   A cláusula ON DELETE define a ação a ser tomada quando um registro na tabela-pai que esteja sendo referenciado pela chave estrangeira é excluído. As ações possíveis são:
+
+        a.   RESTRICT – não permite que o registro seja excluído da tabela-pai, retornando um código de erro;
+
+        b.   CASCADE – propaga a exclusão para a tabela-filho (os registros da tabela-filho que fazem referência ao registro excluído da tabela-pai são excluídos também);
+
+        c.    SET NULL – atribui o valor NULL à chave estrangeira dos registros da tabela-filho que fazem referência ao registro excluído da tabela-pai (a chave estrangeira da tabela-filho não pode ser NOT NULL);
+
+        d.   NO ACTION – o mesmo que RESTRICT.
+
+
+    2.   A cláusula ON UPDATE define a ação a ser tomada quando o campo referenciado pela chave estrangeira é alterado na tabela-pai. As ações idênticas às da cláusula ON DELETE.
+
+
+
+A inclusão de restrições em tabelas populadas faz com que todas as suas linhas sejam verificadas. A inclusão é feita se não há qualquer violação de integridade referencial no esquema. Caso contrário, a inclusão é rejeitada.
+
+Deve-se tomar cuidado com a ordem de criação de tabelas com referências e restrições de integridade relacional. As tabelas referenciadas devem ser criadas antes da criação de tabelas que fazem referência a elas.
+
+
+O exemplo a seguir ilustra o funcionamento destas duas cláusulas. Considera as tabelas EMP e DEPT, criadas e populadas a partir dos comandos abaixo (observe a ordem de criação):
+
+
+    CREATE TABLE IF NOT EXISTS dept (
+        did INT(6) NOT NULL AUTO_INCREMENT, 
+        nome VARCHAR(30) NOT NULL,
+        CONSTRAINT pk_dept PRIMARY KEY (did),
+    );
+ 
+    CREATE TABLE IF NOT EXISTS emp (
+        ssn INT(6) NOT NULL AUTO_INCREMENT, 
+        dept_id INT(6) NOT NULL,
+        CONSTRAINT pk_emp PRIMARY KEY (ssn),
+        CONSTRAINT fk_dept FOREIGN KEY (dept_id) REFERENCES dept (did)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+    );
+ 
+    INSERT INTO dept
+        VALUES (10, ‘Financeiro’), (20, ‘Recursos Humanos’), (30, ‘Marketing’);
+ 
+    INSERT INTO emp
+        VALUES (111111, 10), (222222, 10), (333333, 20);
+
+
+Agora, os comandos abaixo são aplicados na ordem em que aparecem:
+
+    I.   INSERT INTO emp VALUES (444444, 40);
+
+    II. INSERT INTO dept VALUES (40, ‘Comercial’);
+
+    III. INSERT INTO emp VALUES (444444, 40);
+
+    IV. UPDATE dept SET did = 15 WHERE did = 10;
+
+    V. DELETE FROM dept WHERE did = 30;
+
+    VI. DELETE FROM dept WHERE did = 20;
+
+
+O comando (1) tenta incluir um novo registro em EMP, porém a referência da chave estrangeira é inválida (não há em DEPT qualquer registro com did = 40). O comando é rejeitado.
+
+O comando (2) inclui um novo registro em dept.
+
+O comando (3) repete a ação do comando (1), dó que com sucesso (a referência agora existe).
+
+O comando (4) altera o registro com did = 10 em DEPT. O valor de did passa a ser 15. Todas as referências existentes são alteradas de acordo, por conta da cláusula ON UPDATE CASCADE (os dois registros de EMP que fazem referência ao registro alterado têm o valor de suas chaves estrangeiras alterado).
+
+O comando (5) exclui o registro com ssn = 30 em DEPT. Nenhuma ação é tomada, pois não há qualquer referência a este registro.
+
+Finalmente, o comando (6) exclui o registro com did = 20 em DEPT. Todos os registros que fazem referência ao registro excluído são também excluídos de suas respectivas tabelas por conta do comando ON DELETE CASCADE (os dois registros de EMP que fazem referência ao registro excluído são também excluídos).
+
+Um cuidado a ser tomado: os nomes dados às restrições não podem ser repetidos dentro de um mesmo esquema, mesmo que pertençam a tabelas distintas.
+
+
+
+
+
+
+
+
+1- Front-end é o termo utilizado para designar uma interface, gráfica ou não, entre um usuário (pessoa) e um SGBDR. De forma geral, os front-ends possuem editores para desenvolvimento de scripts SQL, ferramentas para manipulação de objetos e dados em um banco de dados, interface para exibição de resultados de comandos SQL, dentre outras funcionalidades
+2- MySQL é um SGBDR de código aberto bastante popular. Segundo diversas publicações especializadas, é o segundo SGDBR mais utilizado e o primeiro entre os de código aberto.
+3- O dialeto implementado pela Oracle, no SGBDR MySQL, define os tipos TINYBLOB, BLOB, MEDIUMBLOB e LONGBLOB, dentro da classe BLOB, para armazenamento de conteúdos digitais com diferentes tamanhos máximos. Apenas como ilustração, um campo do tipo LONGBLOB pode armazenar objetos com tamanho de até 4GB.
+4- No SGBDR MySQL, os tipos TINYTEXT, TEXT, MEDIUMTEXT e LONGTEXT, são implementados Um campo do tipo LONGTEXT pode armazenar textos com tamanho de até 4GB.
+5- Esta operação é chamada type cast ou simplesmente cast. Consulte a documentação do SGBDR para saber como a conversão automática de tipos é realizada.
+6- A sintaxe dos comandos foi adaptada do Manual de Referência do MySQL 8.0 (https://dev.mysql.com/doc/refman/8.0/en/).
+7- Alguns autores consideram os conceitos schema e database distintos. Para eles, um schema é um conjunto de objetos de um mesmo esquema relacional e database é um conjunto de esquemas.
+Primeiro, devem-se excluir as restrições de chave estrangeira das tabelas que fazem referência à chave primária em questão para depois excluir a restrição.
+8- Dados que descrevem dados.
+9- Nem todas as colunas foram apresentadas.
+10- Nem todas as colunas foram apresentadas. Os nomes de algumas colunas foram reduzidos para que coubessem na tabela.
+11- Nem todas as colunas foram apresentadas. Os nomes de algumas colunas foram reduzidos para que coubessem na tabela.
+12- Existem diversos outros operadores que podem ser utilizados em expressões que serão
+
+​
+
+
+
+Atividade Extra
+
+O SGBDR MySQL e seu dialeto SQL implementam um número muito grande de funções e alguns operadores que podem ser utilizados na conversão e verificação de valores das colunas de uma tabela. Pesquise, para o SGBDR escolhido, as funções que ele implementa. Procure por funções de cadeia de caracteres (string), data e hora e de conversão de tipos. Veja também se ele oferece operadores que não fazem parte do SQL padrão.
+
+
+
+
+
+Referência Bibliográfica
+
+ELMASRI, R. e NAVATHE, S. B. Sistemas de Banco de Dados. 7ª Ed., São Paulo: Pearson, 2011.
+
+RAMAKRISHNAN, R., GEHRKE, J. Sistemas de Gerenciamento de Banco de Dados. 3ª Ed., São Paulo: McGraw-Hill, 2008.
+
+CORONEL, C. e ROB, P. Sistemas de Banco de Dados - Projeto, Implementação e Gerenciamento. 1ª Ed., São Paulo: Cengage, 2010.
+
+GROFF, J. R., WEINBERG, P. N. e OPPEL, A. J. SQL: The Complete Reference. 3a Ed., Nova York: McGraw-Hill, 2009.
+
+
+
+
+
+
+
+
