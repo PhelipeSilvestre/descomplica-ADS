@@ -1,4 +1,3 @@
-
 Introdução ao Markdown
 
 O que é o Markdown?
@@ -17,17 +16,94 @@ Por exemplo, no Microsoft Word, que é um editor WYSIWYG, a formatação do text
 
 Tutorial de Markdown - Janela do Microsoft Word WYSIWYG
 photo
- 
+
 Janela do Microsoft Word - WYSIWYG
 
-No Markdown a formatação é aplicada através do uso de símbolos como, a cerquilha #, o asterisco * e o sublinhado _.
+No Markdown a formatação é aplicada através do uso de símbolos como, a cerquilha #, o asterisco \* e o sublinhado \_.
 Essa simbologia é usada pelo processador Markdown para saber quais palavras/frases devem ser formatadas ao converter o seu arquivo para HTML.
 
 Por exemplo, **eu quero que esse texto fique em negrito** e _esse texto em itálico_
 
 Muito confuso? Vamos simplificar um pouco.
 
-Ao cercar o conteúdo com dois asteriscos ** você enfatiza ele em negrito, já no segundo exemplo, nós usamos um sublinhado _ para aplicar o itálico.
+Ao cercar o conteúdo com dois asteriscos \*\* você enfatiza ele em negrito, já no segundo exemplo, nós usamos um sublinhado \_ para aplicar o itálico.
+
+**Principais comandos**
+
+Títulos:
+
+# Título 1
+
+## Título 2
+
+### Título 3
+
+Negrito e Itálico:
+
+**Negrito**
+_Itálico_
+
+Listas:
+
+Lista não ordenada:
+
+- Item 1
+- Item 2
+
+Lista ordenada:
+
+1. Item 1
+2. Item 2
+
+Links:
+
+bash
+
+[Texto do link](URL)
+
+Imagens:
+
+![Texto alternativo](URL_da_imagem)
+
+Citações:
+
+> Texto da citação
+
+Código:
+
+Inline:
+
+go
+
+`Código`
+
+Em bloco:
+
+css
+
+```linguagem
+Código em bloco
+
+Tabelas:
+
+lua
+
+| Cabeçalho 1  | Cabeçalho 2  |
+|--------------|--------------|
+| Dado 1       | Dado 2       |
+
+Linhas Horizontais:
+
+yaml
+
+---
+
+Escape de caracteres especiais:
+
+markdown
+
+\*Texto\*
+
 
 
 **Como editar um arquivo Markdown**
@@ -51,7 +127,7 @@ Markdown vs WYSIWYG
 Se um editor WYSIWYG (que oferece formatação em tempo real) é extremamente conveniente, por qual motivo eu devo usar o Markdown?
 Tutorial de Markdown - Markdown vs WYSIWYG Microsoft Word
 photo
- 
+
 Comparação entre a formatação Markdown e a formatação WYSIWYG.
 Se usando um editor WYSIWYG eu posso pressionar um botão e ter a formatação que eu quero, por que vou digitar um documento com marcação Markdown?
 
@@ -72,7 +148,7 @@ A melhor maneira de aprender é praticando!
 A forma mais rápida de começar a praticar o Markdown é utilizando editores online. Com os aplicativos da Web você não precisa baixar nada, basta acessar o site e começar a editar o seu arquivo md.
 Tutorial de Markdown - Editores online, StackEdit, Dillinger e Editor.md
 photo
- 
+
 Editores online, StackEdit, Dillinger e Editor.md
 StackEdit, Dillinger e Editor.md (Markeditor) são boas opções para iniciar.
 
@@ -82,7 +158,7 @@ O StackEdit é um dos aplicativos mais completos. Além do editor ele também fo
 
 Tutorial de Markdown - Interface do StackEdit
 photo
- 
+
 Interface Web do editor Markdown StackEdit
 Veja mais informações sobre o StackEdit na seção de ferramentas.
 
@@ -91,7 +167,7 @@ O Dillinger tem uma interface bem simples, porém oferece diversas opções para
 
 Tutorial de Markdown - Interface Web do Dillinger
 photo
- 
+
 Interface Web do editor Markdown Dillinger
 Para mais informações sobre o Dillinger clique aqui.
 
@@ -99,7 +175,7 @@ Editor.md (Markeditor)
 Já o Editor.md é uma ferramenta de código aberto, possui um conversor de MD para HTML em tempo real e botões que permitem criar elemento Markdown com apenas um clique.
 Tutorial de Markdown - Interface Web do Editor.md
 photo
- 
+
 Interface Web do editor Markdown Editor.md
 E depois?
 Após adquirir mais experiência você pode baixar algum aplicativo para o seu sistema operacional e começar a editar documentos de forma local.
@@ -113,14 +189,14 @@ Vamos entender o procedimento usado por aplicativos Markdown para converter o se
 
 Tutorial de Markdown - Como converter um arquivo Markdown
 photo
- 
+
 Como converter um arquivo Markdown
 A simplicidade do Markdown
 Como você identifica um arquivo Markdown? Pela extensão, correto? Normalmente md ou markdown.
 
 Tutorial de Markdown - Extensões do arquivo Markdown
 photo
- 
+
 Extensões do arquivo Markdown
 Um arquivo Markdown é um texto simples, não possui nenhuma formatação, não é um arquivo criptografado e menos ainda, compilado.
 
@@ -129,7 +205,7 @@ Vários aplicativos Markdown, além do editor, também possuem um conversor inte
 
 Tutorial de Markdown - Arquivos gerados a partir do formatado Markdown
 photo
- 
+
 Arquivos gerados a partir do formatado Markdown
 Como é feita a conversão
 O conversor Markdown usa um Parser para varrer o seu conteúdo em busca de marcações que sejam compatíveis com o Markdown; Ao encontrar uma marcação compatível, o Parser verifica se há uma correspondência no formato de saída, por exemplo, uma tag HTML que produza a mesma formatação.
@@ -137,7 +213,7 @@ Abaixo você pode visualizar uma tabela exemplo de correspondência entre um mar
 
 Tutorial de Markdown - Comparação sintaxe Markdown com HTML - tabela
 photo
- 
+
 Tabela de Comparação entre sintaxe Markdown & HTML.
 Note que, o formato HTML é um dos mais utilizados quando falamos em converter Markdown. O seu arquivo convertido para HTML pode ser visualizado em qualquer navegador da Web como o Google Chrome, Mozilla Firefox e o Microsoft Edge.
 
@@ -145,7 +221,7 @@ Na imagem abaixo você confere uma versão simplificada do processo de conversã
 
 Tutorial de Markdown - Processo de conversão de Markdown em HTML
 photo
- 
+
 Diagrama simples de como é feito a coversão entre Markdown e HTML.
 NOTA: É importante ressaltar que, em um aplicativo mais robusto, os componentes podem estar separados, inclusive, podem ser independentes uns dos outros. O editor, o conversor, o parser, etc. A imagem acima é apenas uma representação singela de como o procedimento ocorre.
 Vamos resumir a conversão em quatro etapas.
@@ -164,7 +240,7 @@ A criação de conteúdo para a Web é a forma mais popular de utilização do M
 
 Tutorial de Markdown - Postagem no Reddit usando o Markdown
 photo
- 
+
 Postagem no Reddit usando o Markdown
 Você pode também formatar listas de tarefas, mensagens de e-mails, listas de compras e muito mais.
 
@@ -177,7 +253,7 @@ Muitos aplicativos, compatíveis com Markdown, já convertem, automaticamente, o
 
 Tutorial de Markdown - Conversão automática de Markdown para HTML online
 photo
- 
+
 Conversão automática de Markdown para HTML
 Você pode criar sites completos usando como base a formatação do Markdown. Se é isso que pretende fazer, ferramentas como o Jekyll e o MkDocs, podem suprir as suas necessidades.
 
@@ -198,7 +274,7 @@ Negrito, itálico, e tachado são suportados pela linguagem, além, é claro, de
 
 Tutorial de Markdown - Formatando em negrito, itálico e tachado no Markdown
 photo
- 
+
 Formatando em negrito, itálico e tachado no Markdown
 Outra vantagem de formatar documentos usando o Markdown é a possibilidade de convertê-los para basicamente qualquer outro formato de arquivo de texto.
 
@@ -250,7 +326,7 @@ A maioria dos provedores de e-mail fornecem um editor WYSIWYG integrado a interf
 
 Tutorial de Markdown - Interface de criação de email do Gmail
 photo
- 
+
 Interface de criação de email do Gmail
 E agora?
 
@@ -267,7 +343,7 @@ O GitHub migrou seus docs para Markdown com a apoio da ferramenta Jekyll. Além 
 
 Tutorial de Markdown - Documentação do GitHub
 photo
- 
+
 Documentação do GitHub
 NOTA: O GitHub usa uma pequena variante do Markdown chamada GitHub-flavored Markdown.
 Para a criação de documentação técnica, as ferramentas abaixo podem te ajudar:
@@ -282,7 +358,7 @@ Imagine todos os dialetos diferentes que existem em um idioma, gírias, pronunci
 
 Tutorial de Markdown - Sabores do Markdown
 photo
- 
+
 Variações da sintaxe do Markdown
 Pois é, assim como acontece com idiomas, implementações do Markdown em diferentes programas podem variar também, mesmo que a diferença seja sutil, ainda pode causar confusão.
 
@@ -302,3 +378,4 @@ Conclusão
 Nesse artigo você aprendeu os aspectos básicos do Markdown, o que você pode fazer com ele e suas diferentes implementações.
 
 O próximo passo é aprender a sintaxe básica da linguagem ou, se já estiver confiante, consulte as seção de ferramentas para começar a utilizar o Markdown.
+```
