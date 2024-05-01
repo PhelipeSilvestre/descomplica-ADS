@@ -1,0 +1,153 @@
+/* Logico_sisMusica: */
+
+CREATE TABLE ESTILO (
+    Id_estilo NUMERIC PRIMARY KEY,
+    estilo VARCHAR
+);
+
+CREATE TABLE ARTISTA (
+    id_artista NUMERIC PRIMARY KEY,
+    nome VARCHAR,
+    bibliografia VARCHAR,
+    FK_PAIS_id_pais NUMERIC
+);
+
+CREATE TABLE ALBUM (
+    id_album NUMERIC PRIMARY KEY,
+    titulo VARCHAR,
+    ano_lancamento NUMERIC,
+    img_capa BLOB,
+    gravadora VARCHAR
+);
+
+CREATE TABLE PAIS (
+    id_pais NUMERIC PRIMARY KEY,
+    nome_pais VARCHAR,
+    sigla VARCHAR
+);
+
+CREATE TABLE _MUSICA (
+    ordem_musica NUMERIC,
+    id_musica NUMERIC PRIMARY KEY,
+    titulo VARCHAR,
+    duracao NUMERIC,
+    ano NUMERIC,
+    letra CLOB,
+    arquivo BLOB,
+    tags VARCHAR,
+    FK_ESTILO_Id_estilo NUMERIC,
+    FK_ARTISTA_id_artista NUMERIC,
+    FK_ALBUM_id_album NUMERIC
+);
+
+CREATE TABLE USUARIO (
+    id_usuario NUMERIC PRIMARY KEY,
+    email VARCHAR,
+    senha VARCHAR,
+    nome VARCHAR,
+    foto BLOB,
+    FK_PLANO_id_plano NUMERIC
+);
+
+CREATE TABLE PLANO (
+    id_plano NUMERIC PRIMARY KEY,
+    titulo VARCHAR,
+    descricao VARCHAR,
+    valor NUMERIC,
+    vigencia NUMERIC
+);
+
+CREATE TABLE COBRANCA (
+    id_cobranca NUMERIC PRIMARY KEY,
+    data_pagto NUMERIC,
+    valor NUMERIC,
+    final_cartao NUMERIC,
+    FK_PLANO_id_plano NUMERIC,
+    FK_USUARIO_id_usuario NUMERIC
+);
+
+CREATE TABLE CARTAO_CREDITO (
+    id_cartao NUMERIC PRIMARY KEY,
+    nome_impressao VARCHAR,
+    validade NUMERIC,
+    numero NUMERIC,
+    cvv NUMERIC,
+    FK_USUARIO_id_usuario NUMERIC
+);
+
+CREATE TABLE LISTA_REPROD (
+    id_lista NUMERIC PRIMARY KEY,
+    nome VARCHAR,
+    FK_USUARIO_id_usuario NUMERIC
+);
+
+CREATE TABLE _MUSICA_LISTA_REPROD (
+    ordem_musica NUMERIC,
+    FK_MUSICA_id_musica NUMERIC,
+    FK_LISTA_REPROD_id_lista NUMERIC
+);
+
+CREATE TABLE Dependentes (
+    fk_USUARIO_id_usuario NUMERIC,
+    fk_USUARIO_id_usuario_ NUMERIC
+);
+ 
+ALTER TABLE ARTISTA ADD CONSTRAINT FK_ARTISTA_2
+    FOREIGN KEY (FK_PAIS_id_pais)
+    REFERENCES PAIS (id_pais)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE _MUSICA ADD CONSTRAINT FK__MUSICA_2
+    FOREIGN KEY (FK_ESTILO_Id_estilo)
+    REFERENCES ESTILO (Id_estilo);
+ 
+ALTER TABLE _MUSICA ADD CONSTRAINT FK__MUSICA_3
+    FOREIGN KEY (FK_ARTISTA_id_artista)
+    REFERENCES ARTISTA (id_artista);
+ 
+ALTER TABLE _MUSICA ADD CONSTRAINT FK__MUSICA_4
+    FOREIGN KEY (FK_ALBUM_id_album)
+    REFERENCES ALBUM (id_album);
+ 
+ALTER TABLE USUARIO ADD CONSTRAINT FK_USUARIO_2
+    FOREIGN KEY (FK_PLANO_id_plano)
+    REFERENCES PLANO (id_plano)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE COBRANCA ADD CONSTRAINT FK_COBRANCA_2
+    FOREIGN KEY (FK_PLANO_id_plano)
+    REFERENCES PLANO (id_plano)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE COBRANCA ADD CONSTRAINT FK_COBRANCA_3
+    FOREIGN KEY (FK_USUARIO_id_usuario)
+    REFERENCES USUARIO (id_usuario)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE CARTAO_CREDITO ADD CONSTRAINT FK_CARTAO_CREDITO_2
+    FOREIGN KEY (FK_USUARIO_id_usuario)
+    REFERENCES USUARIO (id_usuario)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE LISTA_REPROD ADD CONSTRAINT FK_LISTA_REPROD_2
+    FOREIGN KEY (FK_USUARIO_id_usuario)
+    REFERENCES USUARIO (id_usuario)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE _MUSICA_LISTA_REPROD ADD CONSTRAINT FK__MUSICA_LISTA_REPROD_1
+    FOREIGN KEY (FK_MUSICA_id_musica)
+    REFERENCES ??? (???);
+ 
+ALTER TABLE _MUSICA_LISTA_REPROD ADD CONSTRAINT FK__MUSICA_LISTA_REPROD_2
+    FOREIGN KEY (FK_LISTA_REPROD_id_lista)
+    REFERENCES LISTA_REPROD (id_lista);
+ 
+ALTER TABLE Dependentes ADD CONSTRAINT FK_Dependentes_1
+    FOREIGN KEY (fk_USUARIO_id_usuario)
+    REFERENCES USUARIO (id_usuario)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE Dependentes ADD CONSTRAINT FK_Dependentes_2
+    FOREIGN KEY (fk_USUARIO_id_usuario_)
+    REFERENCES USUARIO (id_usuario)
+    ON DELETE CASCADE;
