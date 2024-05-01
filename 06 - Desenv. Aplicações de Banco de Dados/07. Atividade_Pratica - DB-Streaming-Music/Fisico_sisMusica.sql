@@ -1,89 +1,89 @@
 /* Logico_sisMusica: */
 
 CREATE TABLE ESTILO (
-    Id_estilo NUMERIC PRIMARY KEY,
-    estilo VARCHAR
+    Id_estilo NUMERIC(5) PRIMARY KEY,
+    estilo VARCHAR(50)
 );
 
 CREATE TABLE ARTISTA (
-    id_artista NUMERIC PRIMARY KEY,
-    nome VARCHAR,
-    bibliografia VARCHAR,
-    FK_PAIS_id_pais NUMERIC
+    id_artista NUMERIC(5) PRIMARY KEY,
+    nome VARCHAR(30),
+    bibliografia VARCHAR(500),
+    FK_PAIS_id_pais NUMERIC(5)
 );
 
 CREATE TABLE ALBUM (
-    id_album NUMERIC PRIMARY KEY,
-    titulo VARCHAR,
-    ano_lancamento NUMERIC,
+    id_album NUMERIC(5) PRIMARY KEY,
+    titulo VARCHAR(30),
+    ano_lancamento NUMERIC(4),
     img_capa BLOB,
-    gravadora VARCHAR
+    gravadora VARCHAR(30)
 );
 
 CREATE TABLE PAIS (
-    id_pais NUMERIC PRIMARY KEY,
-    nome_pais VARCHAR,
-    sigla VARCHAR
+    id_pais NUMERIC(5) PRIMARY KEY,
+    nome_pais VARCHAR(30),
+    sigla VARCHAR(3)
 );
 
-CREATE TABLE _MUSICA (
-    ordem_musica NUMERIC,
-    id_musica NUMERIC PRIMARY KEY,
-    titulo VARCHAR,
-    duracao NUMERIC,
-    ano NUMERIC,
+CREATE TABLE MUSICA (
+    ordemMUSICA NUMERIC(3),
+    idMUSICA NUMERIC(5) PRIMARY KEY,
+    titulo VARCHAR(30),
+    duracao NUMERIC(5),
+    ano NUMERIC(4),
     letra CLOB,
     arquivo BLOB,
-    tags VARCHAR,
-    FK_ESTILO_Id_estilo NUMERIC,
-    FK_ARTISTA_id_artista NUMERIC,
-    FK_ALBUM_id_album NUMERIC
+    tags VARCHAR(20),
+    FK_ESTILO_Id_estilo NUMERIC(5),
+    FK_ARTISTA_id_artista NUMERIC(5),
+    FK_ALBUM_id_album NUMERIC(5)
 );
 
 CREATE TABLE USUARIO (
-    id_usuario NUMERIC PRIMARY KEY,
-    email VARCHAR,
-    senha VARCHAR,
-    nome VARCHAR,
+    id_usuario NUMERIC(5) PRIMARY KEY,
+    email VARCHAR(30),
+    senha VARCHAR(30),
+    nome VARCHAR(30),
     foto BLOB,
-    FK_PLANO_id_plano NUMERIC
+    FK_PLANO_id_plano NUMERIC(5)
 );
 
 CREATE TABLE PLANO (
-    id_plano NUMERIC PRIMARY KEY,
-    titulo VARCHAR,
-    descricao VARCHAR,
-    valor NUMERIC,
-    vigencia NUMERIC
+    id_plano NUMERIC() PRIMARY KEY,
+    titulo VARCHAR(30),
+    descricao VARCHAR(100),
+    valor NUMERIC(5),
+    vigencia NUMERIC(5)
 );
 
 CREATE TABLE COBRANCA (
-    id_cobranca NUMERIC PRIMARY KEY,
-    data_pagto NUMERIC,
-    valor NUMERIC,
-    final_cartao NUMERIC,
-    FK_PLANO_id_plano NUMERIC,
-    FK_USUARIO_id_usuario NUMERIC
+    id_cobranca NUMERIC(5) PRIMARY KEY,
+    data_pagto NUMERIC(8),
+    valor NUMERIC(5),
+    final_cartao NUMERIC(4),
+    FK_PLANO_id_plano NUMERIC(5),
+    FK_USUARIO_id_usuario NUMERIC(5)
 );
 
 CREATE TABLE CARTAO_CREDITO (
-    id_cartao NUMERIC PRIMARY KEY,
-    nome_impressao VARCHAR,
-    validade NUMERIC,
-    numero NUMERIC,
-    cvv NUMERIC,
-    FK_USUARIO_id_usuario NUMERIC
+    id_cartao NUMERIC(5) PRIMARY KEY,
+    nome_impressao VARCHAR(30),
+    validade NUMERIC(6),
+    numero NUMERIC(16),
+    cvv NUMERIC(3),
+    FK_USUARIO_id_usuario NUMERIC(5)
 );
 
 CREATE TABLE LISTA_REPROD (
-    id_lista NUMERIC PRIMARY KEY,
-    nome VARCHAR,
-    FK_USUARIO_id_usuario NUMERIC
+    id_lista NUMERIC(5) PRIMARY KEY,
+    nome VARCHAR(30),
+    FK_USUARIO_id_usuario NUMERIC(5)
 );
 
-CREATE TABLE _MUSICA_LISTA_REPROD (
-    ordem_musica NUMERIC,
-    FK_MUSICA_id_musica NUMERIC,
+CREATE TABLE MUSICA_LISTA_REPROD (
+    ordemMUSICA NUMERIC,
+    FKMUSICA_idMUSICA NUMERIC,
     FK_LISTA_REPROD_id_lista NUMERIC
 );
 
@@ -97,15 +97,15 @@ ALTER TABLE ARTISTA ADD CONSTRAINT FK_ARTISTA_2
     REFERENCES PAIS (id_pais)
     ON DELETE CASCADE;
  
-ALTER TABLE _MUSICA ADD CONSTRAINT FK__MUSICA_2
+ALTER TABLE MUSICA ADD CONSTRAINT FK_MUSICA_2
     FOREIGN KEY (FK_ESTILO_Id_estilo)
     REFERENCES ESTILO (Id_estilo);
  
-ALTER TABLE _MUSICA ADD CONSTRAINT FK__MUSICA_3
+ALTER TABLE MUSICA ADD CONSTRAINT FK_MUSICA_3
     FOREIGN KEY (FK_ARTISTA_id_artista)
     REFERENCES ARTISTA (id_artista);
  
-ALTER TABLE _MUSICA ADD CONSTRAINT FK__MUSICA_4
+ALTER TABLE MUSICA ADD CONSTRAINT FK_MUSICA_4
     FOREIGN KEY (FK_ALBUM_id_album)
     REFERENCES ALBUM (id_album);
  
@@ -134,11 +134,11 @@ ALTER TABLE LISTA_REPROD ADD CONSTRAINT FK_LISTA_REPROD_2
     REFERENCES USUARIO (id_usuario)
     ON DELETE CASCADE;
  
-ALTER TABLE _MUSICA_LISTA_REPROD ADD CONSTRAINT FK__MUSICA_LISTA_REPROD_1
-    FOREIGN KEY (FK_MUSICA_id_musica)
+ALTER TABLE MUSICA_LISTA_REPROD ADD CONSTRAINT FK_MUSICA_LISTA_REPROD_1
+    FOREIGN KEY (FKMUSICA_idMUSICA)
     REFERENCES ??? (???);
  
-ALTER TABLE _MUSICA_LISTA_REPROD ADD CONSTRAINT FK__MUSICA_LISTA_REPROD_2
+ALTER TABLE MUSICA_LISTA_REPROD ADD CONSTRAINT FK_MUSICA_LISTA_REPROD_2
     FOREIGN KEY (FK_LISTA_REPROD_id_lista)
     REFERENCES LISTA_REPROD (id_lista);
  
