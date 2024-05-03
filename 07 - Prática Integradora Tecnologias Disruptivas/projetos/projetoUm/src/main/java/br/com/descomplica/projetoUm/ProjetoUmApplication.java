@@ -1,4 +1,4 @@
-package projetos.projetoUm.src.main.java.br.com.descomplica.projetoUm;
+package br.com.descomplica.projetoUm;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
