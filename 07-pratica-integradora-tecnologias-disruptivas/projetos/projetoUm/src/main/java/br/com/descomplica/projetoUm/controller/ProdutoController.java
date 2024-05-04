@@ -30,7 +30,7 @@ public class ProdutoController {
 		if(!produtos.isEmpty())
 			return new ResponseEntity<>(produtos, HttpStatus.OK);
 		else 
-			return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 	}
 	
 	@GetMapping("/{id}")
@@ -39,7 +39,7 @@ public class ProdutoController {
 		if(produto != null)
 			return new ResponseEntity<>(produto, HttpStatus.OK); 
 		else 
-			return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);		
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);		
 	}
 	
 	@PostMapping
@@ -53,7 +53,7 @@ public class ProdutoController {
 		if(produtoAtualizada != null)
 			return new ResponseEntity<>(produtoAtualizada, HttpStatus.OK); 
 		else 
-			return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 	}
 
 	@DeleteMapping("/{id}")

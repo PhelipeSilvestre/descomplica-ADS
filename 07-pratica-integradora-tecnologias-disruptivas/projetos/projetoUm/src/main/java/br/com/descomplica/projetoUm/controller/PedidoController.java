@@ -30,7 +30,7 @@ public class PedidoController {
 		if(!pedidos.isEmpty())
 			return new ResponseEntity<>(pedidos, HttpStatus.OK);
 		else 
-			return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 	}
 	
 	@GetMapping("/{id}")
@@ -39,7 +39,7 @@ public class PedidoController {
 		if(pedido != null)
 			return new ResponseEntity<>(pedido, HttpStatus.OK); 
 		else 
-			return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);		
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);		
 	}
 	
 	@PostMapping
@@ -53,7 +53,7 @@ public class PedidoController {
 		if(pedidoAtualizada != null)
 			return new ResponseEntity<>(pedidoAtualizada, HttpStatus.OK); 
 		else 
-			return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 	}
 
 	@DeleteMapping("/{id}")

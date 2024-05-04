@@ -29,7 +29,7 @@ public class CategoriaController {
 		if(!categorias.isEmpty())
 			return new ResponseEntity<>(categorias, HttpStatus.OK);
 		else 
-			return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 	}
 	
 	@GetMapping("/{id}")
@@ -38,7 +38,7 @@ public class CategoriaController {
 		if(categoria != null)
 			return new ResponseEntity<>(categoria, HttpStatus.OK); 
 		else 
-			return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);		
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);		
 	}
 	
 	@PostMapping
@@ -52,7 +52,7 @@ public class CategoriaController {
 		if(categoriaAtualizada != null)
 			return new ResponseEntity<>(categoriaAtualizada, HttpStatus.OK); 
 		else 
-			return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 	}
 
 	@DeleteMapping("/{id}")
