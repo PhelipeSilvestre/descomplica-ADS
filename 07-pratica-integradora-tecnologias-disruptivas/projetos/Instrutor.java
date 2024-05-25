@@ -28,7 +28,7 @@ public class Instrutor {
     @OneToMany(mappedBy = "instrutor")
     private Set<Turma> turma;    
     
-    // Getters and setters
+    // Gets and sets
 
     public int getidInstrutor(){
         return idInstrutor;
