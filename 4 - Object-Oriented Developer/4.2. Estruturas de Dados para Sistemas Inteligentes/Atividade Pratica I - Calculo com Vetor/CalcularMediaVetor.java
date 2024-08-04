@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-class calcularMediaVetor{
+class CalcularMediaVetor{
     public static void main(String[] args) {
         int vetSoma[ ];
         int media = 0;
