@@ -170,42 +170,42 @@ Nesta aula, vamos explorar a estrutura de um projeto Flutter. Entender a organiz
 
 
 
-    import ‘package:flutter/material.dart’;
-    void main() {
+          import ‘package:flutter/material.dart’;
+          void main() {
 
-    runApp(MyApp());​
+          runApp(MyApp());​
 
-    }​
+          }​
 
-    class MyApp extends StatelessWidget {​
+          class MyApp extends StatelessWidget {​
 
-      @override​
+            @override​
 
-    Widget build(BuildContext context) {​
+          Widget build(BuildContext context) {​
 
-    return MaterialApp(​
+          return MaterialApp(​
 
-      home: Scaffold(​
+            home: Scaffold(​
 
-        appBar: AppBar(​
+            appBar: AppBar(​
 
-          title: Text(‘Meu Aplicativo Flutter’),​
+            title: Text(‘Meu Aplicativo Flutter’),​
 
-        ),
+          ),
 
-        body: Center(
+         body: Center(
 
           child: Text(‘Olá, Flutter!’),​
 
         ),​
 
-      ),​
+            ),​
 
-    );​
+          );​
 
-  }​
+        }​
 
-}
+      }
 
 
 Explicação: Este código inicializa o aplicativo Flutter e exibe uma tela com um título e um texto centralizado.
@@ -220,53 +220,54 @@ Widgets Básicos
 
 1. Widget Text
 
-Text(
-  ‘Olá, Flutter!’,​
+            Text(
+              ‘Olá, Flutter!’,​
 
-  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),​
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),​
 
-);
+            );
 
 Explicação: Exibe um texto estilizado na tela.
 
 2. Widget Image
 
-Image.network(‘https://flutter.dev/images/flutter-logo-sharing.png’);
+            Image.network(‘https://flutter.dev/images/flutter-logo-sharing.png’);
+
 Explicação: Exibe uma imagem a partir de uma URL.
 
 Layouts Básicos
 
 1. Widget Column
 
-Column(
-  mainAxisAlignment: MainAxisAlignment.center,​
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,​
 
-  children: <Widget>[​
+              children: <Widget>[​
 
-    Text(‘Texto 1’),​
+                Text(‘Texto 1’),​
 
-    Text(‘Texto 2’),​
+                Text(‘Texto 2’),​
 
-  ],​
+              ],​
 
-);
+            );
 
 Explicação: Organiza widgets em uma coluna vertical.
 
 2. Widget Row
 
-Row(
-  mainAxisAlignment: MainAxisAlignment.spaceEvenly,​
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,​
 
-  children: <Widget>[​
+              children: <Widget>[​
 
-    Text(‘Texto 1’),​
+                Text(‘Texto 1’),​
 
-    Text(‘Texto 2’),​
+                Text(‘Texto 2’),​
 
-  ],​
+              ],​
 
-);
+            );
 
 Explicação: Organiza widgets em uma linha horizontal.
 
@@ -274,151 +275,152 @@ Containers
 
 1. Widget Container
 
-Container(
-  padding: EdgeInsets.all(16.0),​
+            Container(
+              padding: EdgeInsets.all(16.0),​
 
-  decoration: BoxDecoration(​
+              decoration: BoxDecoration(​
 
-    color: Colors.blue,​
+                color: Colors.blue,​
 
-    borderRadius: BorderRadius.circular(8.0),​
+                borderRadius: BorderRadius.circular(8.0),​
 
-  ),​
+              ),​
 
-  child: Text(‘Conteúdo do Container’, style: TextStyle(color: Colors.white)),​
+              child: Text(‘Conteúdo do Container’, style: TextStyle(color: Colors.white)),​
 
-);
+            );
 
 Explicação: O Container é um widget versátil que pode ser utilizado para adicionar padding, margens, bordas e cor de fundo a outros widgets.
 
 Nesta aula, aprenderemos sobre a interação básica do usuário em aplicativos Flutter. Discutiremos como utilizar widgets interativos como RaisedButton, TextField e GestureDetector. Veremos exemplos práticos de como capturar e responder a eventos de usuário, como cliques de botão e entrada de texto.
 
-Interação Básica do Usuário
+
+### Interação Básica do Usuário
 
 Widgets Interativos
 
 1. Widget RaisedButton
 
-RaisedButton(
-  onPressed: () {​
+            RaisedButton(
+              onPressed: () {​
 
-    print(‘Botão pressionado’);​
+                print(‘Botão pressionado’);​
 
-  },​
+              },​
 
-  child: Text(‘Pressione-me’),​
+              child: Text(‘Pressione-me’),​
 
-);
+            );
 
 Explicação: Cria um botão que responde ao clique do usuário.
 
 2. Widget TextField
 
-TextField(
-  decoration: InputDecoration(​
+            TextField(
+              decoration: InputDecoration(​
 
-    labelText: ‘Digite algo’,​
+                labelText: ‘Digite algo’,​
 
-  ),​
+              ),​
 
-  onChanged: (text) {​
+              onChanged: (text) {​
 
-    print(‘Texto digitado: $text’);​
+                print(‘Texto digitado: $text’);​
 
-  },​
+              },​
 
-);
+            );
 
 Explicação: Cria um campo de texto que captura a entrada do usuário.
 
-Detecção de Gestos
+### Detecção de Gestos
 
 1. Widget GestureDetector
 
-GestureDetector(
-  onTap: () {​
+            GestureDetector(
+              onTap: () {​
 
-    print(‘Área tocada’);​
+                print(‘Área tocada’);​
 
-  },​
+              },​
 
-  child: Container(​
+              child: Container(​
 
-    color: Colors.blue,​
+                color: Colors.blue,​
 
-    padding: EdgeInsets.all(16.0),​
+                padding: EdgeInsets.all(16.0),​
 
-    child: Text(‘Toque aqui’, style: TextStyle(color: Colors.white)),​
+                child: Text(‘Toque aqui’, style: TextStyle(color: Colors.white)),​
 
-  ),​
+        ),​
 
-);
+            );
 
 Explicação: Detecta gestos de toque em uma área específica da interface do usuário.
 
-Exemplo de Interação Completa
+### Exemplo de Interação Completa
 
 1. Código Completo
 
-import ‘package:flutter/material.dart’;
-void main() {​
+            import ‘package:flutter/material.dart’;
+            void main() {​
 
-  runApp(MyApp());
+              runApp(MyApp());
 
-}​
+            }​
 
-class MyApp extends StatelessWidget {​
+            class MyApp extends StatelessWidget {​
 
-  @override​
+              @override​
 
-  Widget build(BuildContext context) {​
+              Widget build(BuildContext context) {​
 
-    return MaterialApp(​
+                return MaterialApp(​
 
-      home: Scaffold(
-
-​        appBar: AppBar(​
-          title: Text(‘Interação Básica’),​
+                  home: Scaffold(
+                  appBar: AppBar(​
+                      title: Text(‘Interação Básica’),​
 
         ),​
 
         body: InteractionExample(),
+      
+            ),
 
-      ),
+                );​
 
-    );​
+              }​
 
-  }​
+            }​
 
-}​
+            class InteractionExample extends StatefulWidget {​
 
-class InteractionExample extends StatefulWidget {​
+              @override​
 
-  @override​
+              _InteractionExampleState createState() => _InteractionExampleState();
 
-  _InteractionExampleState createState() => _InteractionExampleState();
+              }​
+            class _InteractionExampleState extends State<InteractionExample> {​
 
-​}​
-class _InteractionExampleState extends State<InteractionExample> {​
+              String _displayText = ‘Pressione o botão’;​
 
-  String _displayText = ‘Pressione o botão’;​
+        void _updateText() {​
 
-  void _updateText() {​
+                setState(() {​
 
-    setState(() {​
+            _displayText = ‘Botão pressionado!’;​
 
-      _displayText = ‘Botão pressionado!’;​
+                });
 
-    });
+              }
 
-  }
+               @override​
 
-​  @override​
-  Widget build(BuildContext context) {​
+               Widget build(BuildContext context) {​
 
-    return Center(​
+                return Center(​
 
-      child: Column(​
+                  child: Column(​
 
         mainAxisAlignment: MainAxisAlignment.center,​
 
@@ -438,13 +440,13 @@ class _InteractionExampleState extends State<InteractionExample> {​
 
         ],​
 
-      ),​
+            ),​
 
-    );​
+          );​
 
-  }​
+        }​
 
-}
+            }
 
 Explicação: Este exemplo cria um aplicativo com um texto que muda quando o botão é pressionado. Utiliza o setState para atualizar o estado do widget e redibujar a interface.
 
